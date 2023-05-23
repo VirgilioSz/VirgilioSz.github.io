@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#chipset">3.1 Chipset</a>
+                <ul>
+                    <li><a href="#cpu">3.1.1 CPU</a></li>
+                    <li><a href="#bus">3.1.2 Controlador del bus</a></li>
+                    <li><a href="#puertas">3.1.3 Puertas de entrada salida E/S</a></li>
+                    <li><a href="#interruptores">3.1.4 Controlador de interruptores</a></li>
+                    <li><a href="#memoria">3.1.5 Controlador de acceso directo a memoria</a></li>
+                    <li><a href="#temporizacion">3.1.6 Circuitos de temporización</a></li>
+                    <li><a href="#control">3.1.7 Circuitos de control</a></li>
+                    <li><a href="#video">3.1.8 Controladores de video</a></li>
+                </ul>
+            </li>
+            <li><a href="#aplicaciones">3.2 Aplicaciones</a>
+                <ul>
+                    <li><a href="#salida">3.2.1 Entrada/Salida</a></li>
+                    <li><a href="#almacenamiento">3.2.2 Almacenamiento</a></li>
+                    <li><a href="#fuentes">3.2.3 Fuentes de alimentación</a></li>
+                </ul>
+            </li>
+            <li><a href="#ambientes">3.3 Ambientes de servicio</a>
+                <ul>
+                    <li><a href="#negocios">3.3.1 Negocios</a></li>
+                    <li><a href="#industria">3.3.2 Industria</a></li>
+                    <li><a href="#comercio">3.3.3 Comercio electrónico</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="Chipset">3.1 Chipset</h1>
+        </center>
+
+        <br><br>
+        <h2 class="unidadSubtitulo">Definición</h2>
+        <p>Un chipset es un conjunto de componentes electrónicos que gestionan el flujo de datos entre el procesador, la
+            memoria, y los periféricos.</p>
+
+        <h1 class="unidadTitulo" id="cpu">3.1.1 CPU</h1>
+
+        <h2 class="unidadSubtitulo">Criterios al seleccionar cpu</h2>
+        <ul class="listaUnidad numero">
+            <li>Rendimiento
+                <ul class="listaUnidad circulo">
+                    <li>Núcleos, caché, GPUs integradas, frecuencia, hilos.</li>
+                </ul>
+            </li>
+
+            <li>Finalidad
+                <ul class="listaUnidad circulo">
+                    <li>Para servidores, uso empresarial, doméstico, creativo, científico o de entretenimiento.</li>
+                </ul>
+            </li>
+
+            <li>Compatibilidad
+                <ul class="listaUnidad circulo">
+                    <li>Zócalos compatibles (esto garantiza que sea compatible con la placa madre), compatibilidad de
+                        BIOS.</li>
+                </ul>
+            </li>
+
+            <li>Presupuesto
+                <ul class="listaUnidad circulo">
+                    <li>$50-100 para uso casual</li>
+                    <li>$150-250 para gaming</li>
+                    <li>$250-350 para streaming/creación de contenido</li>
+                    <li>$400+ para edición</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="unidadSubtitulo">Núcleos</h2>
+        <p>Los núcleos de un microprocesador, también conocidos como unidades de procesamiento (CPUs), realizan lectura
+            y ejecución de instrucciones, las cuales, aunque son instrucciones ordinarias, son paralelizadas en la
+            ejecución. Los multiprocesadores ser homogéneos o heterogéneos: los homogéneos tienen núcleos idénticos, y
+            los heterogéneos tienen núcleos diferentes.</p>
+
+        <h2 class="unidadSubtitulo">Caché</h2>
+        <p>Considerando que la velocidad de los procesadores aumenta más rápido que la velocidad de la memoria, la
+            optimización del procesamiento mediante caché es bastante importante para procesadores de alta gama, de lo
+            contrario se tendrá un cuello de botella.</p>
+        <p>El caché usa RAM estática, es decir, memoria cuyas celdas de memoria utilizan flip-flops, que son más rápidas
+            pero más caras. El caché disminuye la latencia y mejora el rendimiento (ancho de banda) del procesador.</p>
+        <p>Hay 3 niveles de caché: L1, L2, L3, donde el L1 es el más rápido y de menor tamaño, mientras que el L3 es el
+            más lento y de mayor tamaño.</p>
+
+        <h2 class="unidadSubtitulo">Frecuencia</h2>
+        <p>Un generador de reloj es un circuito que produce una señal periódica que sincroniza al circuito y su
+            funcionamiento.
+            La velocidad de reloj o frecuencia del procesador se refiere a la velocidad a la cual el generador de reloj
+            del procesador genera pulsos, los cuales son indicadores de la rapidez del procesador y sus operaciones.
+        </p>
+        <p>Es decir, la frecuencia de un procesador es un indicador de su velocidad, de la cantidad de operaciones que
+            hace por segundo. Específicamente, la frecuencia, medida en Hz, indica cuántos pulsos eléctricos afectan a
+            un microprocesador por segundo.
+        </p>
+        <p>No obstante, aunque mayor frecuencia implica mayor velocidad de procesamiento, se deben tomar en cuenta la
+            optimización de estos, ya sea por segmentación de instrucciones como por núcleos múltiples.
+        </p>
+
+        <h2 class="unidadSubtitulo">Hilos</h2>
+        <p>Especifica el número de procesos independientes que un CPU permite, y algunas tecnologías (Intel
+            Hyperthreading y AMD Simultaneous Multithreading) permiten que un solo núcleo pueda tener 2 o más hilos.
+        </p>
+
+        <h2 class="unidadSubtitulo">Overclocking</h2>
+        <p>La práctica de sobrecargar la frecuencia del procesador (mediante mayores voltajes) a tasas mayores a las
+            certificadas por el manufacturero. Algunos procesadores no permiten esto.</p>
+
+        <img src="https://concepto.de/wp-content/uploads/2014/08/CPU-e1551228076500.jpg" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="bus">3.1.2 Controlador del bus</h1>
+
+        <h2 class="unidadSubtitulo">Conceptos</h2>
+        <p>En informática, un bus es un conjunto de líneas de comunicación que conectan diferentes componentes de
+            hardware dentro de un sistema de computación, permitiendo la transferencia de datos y señales entre ellos.
+            Esencialmente, el bus actúa como una carretera por la que fluye información dentro de la computadora.
+        </p>
+        <p>El driver o controlador de dispositivos es un pequeño software que conecta el sistema operativo directamente
+            con los componentes del hardware de la PC.</p>
+        <p>El driver le da instrucciones al sistema operativo sobre cómo debe funcionar determinado hardware y de qué
+            forma el sistema debe trabajar en conjunto para suministrarte los mejores resultados.</p>
+
+        <h2 class="unidadSubtitulo">¿Qué es un controlador de bus?</h2>
+        <p>Un controlador de bus es un componente clave en la arquitectura de una computadora que se encarga de
+            coordinar y gestionar la comunicación entre los diferentes componentes de hardware que se conectan al bus.
+            El controlador de bus establece protocolos de comunicación, controla el flujo de datos, gestiona
+            interrupciones y asigna recursos de hardware, asegurando que los diferentes componentes de hardware puedan
+            comunicarse de manera efectiva y coordinada.
+        </p>
+
+        <img src="https://arquitecturadecomputadora.files.wordpress.com/2013/06/bus-de-datos.jpg">
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="puertas">3.1.3 Puertas de entrada salida E/S</h1>
+
+        <h2 class="unidadSubtitulo">¿Qué son?</h2>
+        <p>Los puertos de entrada/salida son interfaces que permiten la comunicación entre dispositivos periféricos y la
+            placa madre o chipset de un ordenador. Estos puertos pueden ser utilizados para conectar dispositivos
+            externos, como teclados, ratones, impresoras, monitores, discos duros externos, entre otros.
+        </p>
+
+        <h2 class="unidadSubtitulo">¿En dónde se ubican?</h2>
+        <p>En el chipset tenemos dos componentes principales, el Northbridge y el Southbridge. El Northbridge se encarga
+            de la comunicación interna y el Southbridge de la comunicación externa. Por lo tanto los puertos de E/S se
+            encuentran en el Southbridge.
+        </p>
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad circulo">
+            <li>Puerto serial / RS-232: Se utiliza para conectar dispositivos de comunicación serial, como módems y
+                dispositivos de GPS.</li>
+            <li>Puerto paralelo / LPT: utilizado para la conexión de impresoras, escáneres y otros dispositivos.</li>
+            <li>Puerto VGA: Utilizado para conectar monitores y pantallas de ordenador a la tarjeta gráfica de una
+                computadora mediante señal analógica. Reemplazado por HDMI y DisplayPort.</li>
+            <li>SB (Universal Serial Bus): Usado para conectar una amplia variedad de dispositivos periféricos, como
+                discos duros externos, cámaras digitales, teclados, ratones, entre otros. Los puertos USB tienen
+                diferentes velocidades de transferencia de datos, desde USB 1.1 hasta USB 3.2 y distintos tipos como
+                USB-C y micro-USB</li>
+            <li>Ethernet: Usado para conectar el ordenador a una red local o a Internet. Los puertos Ethernet tienen
+                diferentes velocidades de transferencia de datos, desde 10 Mbps hasta 100 Gbps.</li>
+            <li>PS/2: Fueron de los primeros puertos usados para conectar el mouse y el teclado, reemplazados
+                posteriormente por USB.</li>
+            <li>DisplayPort: Utilizado para transmitir señales de audio y video de alta calidad entre dispositivos, como
+                pantallas y monitores. Soporta resoluciones de hasta 8K y 60Hz.</li>
+            <li>HDMI: Este puerto se utiliza para conectar dispositivos de video, como monitores y televisores, a la
+                placa madre del ordenador. HDMI puede transmitir audio y video en alta definición a 4K y 60Hz.</li>
+            <li>Puerto de audio: Este puerto es utilizado para conectar altavoces, auriculares, micrófonos y otros
+                dispositivos de audio.</li>
+            <li>Puerto FireWire: Este puerto es utilizado para conectar dispositivos de alta velocidad, como cámaras de
+                video y discos duros externos. FireWire también se conoce como IEEE 1394.
+            </li>
+        </ul>
+
+        <img src="https://adrianadimu27.files.wordpress.com/2013/04/c3adndice.jpg" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="interruptores">3.1.4 Controlador de interruptores</h1>
+
+        <p>El controlador de interrupciones es un componente crucial en el hardware de una computadora. Permite que el
+            procesador sepa cuándo ocurre una interrupción y cómo manejarla. Sin el controlador de interrupciones, una
+            computadora no podría manejar las interrupciones de manera eficiente, lo que resultaría en un mal
+            funcionamiento del sistema.</p>
+
+        <h2 class="unidadSubtitulo">Función</h2>
+        <p>La función principal del controlador de interrupciones es recibir señales de interrupción de dispositivos
+            periféricos y pasarlas al procesador. El controlador de interrupciones tiene la capacidad de controlar y
+            priorizar estas interrupciones según su importancia.</p>
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad circulo">
+            <li>Hardware: Son generadas por dispositivos periféricos, como el teclado o el mouse</li>
+            <li>Software: Son generadas por el propio sistema operativo.</li>
+        </ul>
+
+        <h2 class="unidadSubtitulo">Estructura</h2>
+        <p>El controlador de interrupciones está compuesto por dos chips: el PIC maestro y el PIC esclavo. El PIC
+            maestro es el encargado de recibir las señales de interrupción y de enviarlas al procesador, mientras que el
+            PIC esclavo se utiliza para manejar las interrupciones de los dispositivos periféricos adicionales.</p>
+
+        <h2 class="unidadSubtitulo">Configuración</h2>
+        <p>La configuración del controlador de interrupciones se realiza mediante el registro de máscara de
+            interrupción. Este registro se utiliza para habilitar o deshabilitar las interrupciones de dispositivos
+            periféricos específicos.</p>
+        <img src="https://www.tecnologia-informatica.com/wp-content/uploads/2020/03/puertas-logicas-2.jpeg" alt="">
+    </section>
+
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="memoria">3.1.5 Controlador de acceso directo a memoria</h1>
+        <h2 class="unidadSubtitulo">¿Qué es?</h2>
+        <p>El acceso directo a memoria es una característica de las computadoras y microprocesadores modernos que
+            permite que ciertos subsistemas de hardware dentro de la computadora puedan acceder a la memoria del sistema
+            para la lectura y/o escritura, independientemente de la unidad central de procesamiento (CPU). De lo
+            contrario, la CPU tendría que copiar cada porción de datos desde el origen hacia el destino, haciendo que
+            ésta no esté disponible para otras tareas.
+        </p>
+
+        <h2 class="unidadSubtitulo">Características generales</h2>
+        <ul class="listaUnidad circulo">
+            <li>Aquellas computadoras que tienen canales DMA pueden transferir datos desde y hacia los dispositivos con
+                menos utilización de CPU más que aquellas computadoras sin canales DMA</li>
+            <li>Una transferencia DMA consiste en copiar un bloque de memoria de un dispositivo a otro</li>
+            <li>En computadoras sin DMA, el CPU generalmente se ocupa completo durante toda la operación de lectura o
+                escritura de la memoria y, por lo tanto, no está disponible para realizar otras tareas</li>
+            <li>Con DMA, el CPU puede iniciar la transferencia, luego realizar otras operaciones mientras la
+                transferencia está en progreso y luego recibir una interrupción del controlador de DMA una vez que la
+                transferencia termina</li>
+            <li>DMA es útil en aplicaciones en tiempo real y en el procesamiento de flujos de datos</li>
+        </ul>
+
+        <img src="data:image/png;base64,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"
+            alt="">
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad circulo">
+            <li>DMA por robo de ciclo: Esta estrategia utiliza uno o más ciclos de CPU para cada instrucción que se
+                ejecuta. Esto permite alta disponibilidad del bus del sistema para la CPU, aunque la transferencia de
+                datos se hará más lentamente</li>
+            <li>DMA por ráfagas: Esta estrategia consiste en enviar el bloque de datos solicitado mediante una ráfaga
+                empleando el bus del sistema hasta finalizar la transferencia. Permite una altísima velocidad, pero la
+                CPU no podrá utilizar el bus de sistema durante el tiempo de transferencia, por lo que permanece
+                inactiva</li>
+            <li>DMA transparente: Esta estrategia consiste en emplear el bus del sistema cuando la CPU no lo necesita.
+                Esto permite que la transferencia no impida que la CPU utilice el bus del sistema; pero la velocidad de
+                transferencia es la más baja posible</li>
+            <li>DMA Scatter-gather: Esta estrategia permite transmitir datos a varias áreas de memoria en una
+                transacción DMA simple. Su objetivo es librar a la CPU la tarea de la copia de datos e interrupciones de
+                entrada/salida múltiples</li>
+        </ul>
+
+        <img src="https://arquitcomputadoras.files.wordpress.com/2013/06/piodma.gif" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="temporizacion">3.1.6 Circuitos de temporización</h1>
+        <h2 class="unidadSubtitulo">Definición</h2>
+        <ul class="listaUnidad circulo">
+            <li>Un temporizador es un circuito que se encuentra en la tarjeta madre del PC y que es capaz de mantener
+                una cuenta de tiempo basada en el reloj de la computadora</li>
+            <li>Un temporizador básicamente consiste en un elemento que se activa o desactiva después de un tiempo
+                preestablecido. De esta manera podemos determinar el parámetro relacionado con el tiempo que ha de
+                transcurrir para que el circuito susceptible de temporizarse, se detenga o empiece a funcionar o
+                simplemente cierre un contacto o lo abra</li>
+            <li>Estos circuitos utilizan componentes electrónicos como capacitores, resistencias, diodos y transistores
+                para generar señales de temporización que pueden utilizarse para realizar diversas funciones</li>
+        </ul>
+
+        <h2 class="unidadSubtitulo">Aplicaciones</h2>
+        <p>Los circuitos de temporización se utilizan en una amplia variedad de aplicaciones, desde la electrónica de
+            consumo hasta la industria, y son esenciales para el funcionamiento de muchos sistemas electrónicos
+            complejos.</p>
+
+        <h2 class="unidadSubtitulo">Funciones</h2>
+        <ul class="listaUnidad circulo">
+            <li>Generan señales lógicas para sincronizar y regular las diferentes operaciones que realizan los
+                subcomponentes del sistema informático</li>
+            <li>Es un chip con la capacidad de realizar diferentes funciones de conteo. Es útil para medir el tiempo que
+                dura cierto proceso o para mantener actualizadas la hora del día y la fecha si deja la PC conectada y
+                encendida. Se emplea también para controlar períodos de tiempo (timers)</li>
+            <li>Retarda el paso de una señal desde un nodo del circuito hasta otro punto</li>
+            <li>Puede usarse para calcular el intervalo entre dos mediciones de tiempo o para generar pausas</li>
+            <li>Pueden usarse para generar estados de espera, que son periodos de tiempo en los que el bus del sistema
+                se detiene o se extiende para adaptarse a la velocidad de las tarjetas o la memoria</li>
+        </ul>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/SimpleWatchdogTimer.gif/300px-SimpleWatchdogTimer.gif"
+            alt="">
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="control">3.1.7 Circuitos de control</h1>
+        <p>Los circuitos de control en un chipset son aquellos componentes electrónicos que se encargan de gestionar el
+            flujo de datos y controlar el comportamiento de los diferentes dispositivos conectados a la placa madre.</p>
+        <p>El chipset es un conjunto de circuitos integrados que incluyen una variedad de componentes electrónicos, como
+            transistores, diodos, resistencias, capacitores, etc., diseñados para cumplir con una función específica. En
+            el caso de los circuitos de control, estos componentes trabajan en conjunto para controlar y coordinar el
+            flujo de datos entre el procesador, la memoria y otros dispositivos de hardware conectados a la placa madre,
+            como discos duros, tarjetas de video, tarjetas de sonido, entre otros.
+        </p>
+        <p>El chipset se compone principalmente de dos partes: el Northbridge y el Southbridge. El Northbridge es
+            responsable de conectar el procesador a la memoria y a la interfaz de la tarjeta gráfica de alta velocidad,
+            mientras que el Southbridge se encarga de conectar los periféricos más lentos, como los puertos USB, el
+            disco duro y los controladores de red.
+        </p>
+        <p>Los circuitos de control en un chipset son responsables de controlar y coordinar el flujo de datos entre el
+            procesador, la memoria y otros dispositivos de hardware conectados a la placa madre, permitiendo que los
+            dispositivos trabajen juntos de manera eficiente y efectiva.</p>
+
+        <img src="https://hp.teveotecno.com.ar/wp-content/uploads/2022/03/what-is-a-motherboard-chipset_622128f5304ed.jpeg"
+            alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="video">3.1.8 Controladores de video</h1>
+        <h2 class="unidadSubtitulo">¿Qué es?</h2>
+        <p>Los controladores de video son componentes esenciales en cualquier dispositivo que tenga una pantalla. Se
+            encargan de enviar la información gráfica desde el procesador a la pantalla, asegurando que las imágenes se
+            muestren correctamente y sin interrupciones.
+        </p>
+        <p>A medida que las pantallas han evolucionado, también lo han hecho los controladores de video. Ahora son
+            capaces de soportar resoluciones más altas, tasas de refresco más rápidas y colores más precisos, lo que
+            permite una experiencia visual impresionante.
+        </p>
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <p>Existen dos tipos principales de controladores de video: integrados y dedicados. Los controladores integrados
+            se encuentran dentro del procesador y comparten la memoria RAM con otros componentes del sistema. Son
+            adecuados para tareas básicas como navegación web y edición de documentos, pero no son lo suficientemente
+            potentes para juegos o aplicaciones gráficas intensivas.
+        </p>
+        <p>Por otro lado, los controladores dedicados tienen su propia memoria y procesador, lo que les permite manejar
+            gráficos complejos sin afectar el rendimiento general del sistema. Son ideales para juegos, diseño gráfico y
+            edición de video, pero pueden ser costosos y consumir mucha energía.
+        </p>
+    </section>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="aplicaciones">3.2 Aplicaciones</h1>
+        </center>
+
+        <br><br>
+        <h1 class="unidadTitulo" id="salida">3.2.1 Entrada/Salida</h1>
+        <h2 class="unidadSubtitulo">¿Qué es?</h2>
+        <p>Un periférico de entrada/salida o E/S (en inglés: input/output o I/O) es aquel tipo de dispositivo periférico
+            de un computador capaz de interactuar con los elementos externos a ese sistema de forma bidireccional, es
+            decir, que permite tanto que sea ingresada información desde un sistema externo, como emitir información a
+            partir de ese sistema.
+        </p>
+        <p>Los Dispositivos Periféricos de entrada son todos aquellos dispositivos que permiten introducir datos o
+            información en una computadora para que esta los procese u ordene.
+        </p>
+
+        <img src="https://pbs.twimg.com/media/D6HfV02WsAIgphY.jpg" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="almacenamiento">3.2.2 Almacenamiento</h1>
+        <h2 class="unidadSubtitulo">Características generales</h2>
+        <p>El almacenamiento de datos tiene un proceso a través del uso de la tecnología, ésta se aplica para organizar,
+            distribuir y archivar información con los bytes y los bits que son parte de los sistemas de los que la gente
+            depende día con día, llega a ser tan importante en todos los servicios: desde una simple aplicación,
+            contenido multimedia, direcciones, contactos, hasta protocolos de red y todo lo que tiene que ver con el
+            mundo digital.
+        </p>
+
+        <h2 class="unidadSubtitulo">Dispositivos de almacenamiento</h2>
+        <p>Un dispositivo de almacenamiento es un hardware que se utiliza principalmente para almacenar datos. Cada
+            computadora de escritorio, computadora portátil, tablet y smartphone tendrán algún tipo de dispositivo de
+            almacenamiento en su interior y también puedes obtener unidades de almacenamiento externo independientes que
+            se pueden utilizar en varios dispositivos.</p>
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad circulo">
+            <li>HDD (Hard-Disk Drive)</li>
+            <li>SSD (Solid State Drive)</li>
+            <li>Nube</li>
+        </ul>
+
+        <img src="https://www.editalo.pro/wp-content/uploads/2021/02/Disco-duro-ssd-m.2-nvme--scaled.jpg" alt="">
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="fuentes">3.2.3 Fuentes de alimentación</h1>
+        <h2 class="unidadSubtitulo">¿Qué es?</h2>
+        <p>Las fuentes de alimentación son dispositivos que convierten la corriente alterna (AC) en corriente continua
+            (DC) para suministrar energía a los componentes de la computadora. Existen varios tipos de fuentes de
+            alimentación, como las fuentes ATX, las fuentes SFX y las fuentes TFX. Cada tipo tiene sus propias
+            características y capacidades de potencia.
+        </p>
+        <p>Las fuentes de alimentación también se dividen según su eficiencia energética, medida en porcentaje. Las
+            fuentes con una eficiencia del 80% o más se consideran eficientes, mientras que las fuentes con una
+            eficiencia del 90% o más se consideran de alta eficiencia. Las fuentes de alta eficiencia son más caras pero
+            pueden ahorrar dinero a largo plazo debido a su menor consumo de energía.
+        </p>
+        <p>Las fuentes de voltaje son componentes esenciales en cualquier computadora, ya que proporcionan la energía
+            necesaria para que el sistema funcione adecuadamente.</p>
+        <p>Existen diferentes tipos de fuentes de voltaje, cada una con características específicas que se adaptan a las
+            necesidades de cada usuario.</p>
+
+        <img src="https://hardzone.es/app/uploads-hardzone.es/2020/11/Formatos-Fuente.jpg" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <center>
+            <h1 class="unidadTema" id="ambientes">3.3 Ambientes de servicio</h1>
+        </center>
+
+        <br><br>
+        <h2 class="unidadSubtitulo">¿Qué son?</h2>
+        <p>Los ambientes de servicios en la arquitectura de computadoras se refieren a los distintos entornos que son
+            necesarios para el correcto funcionamiento de un sistema informático. Estos ambientes pueden incluir tanto
+            hardware como software, y son fundamentales para garantizar que los dispositivos electrónicos puedan
+            interactuar adecuadamente con los usuarios y con otros sistemas.
+        </p>
+
+        <h1 class="unidadTitulo" id="negocios">3.3.1 Negocios</h1>
+        <h2 class="unidadSubtitulo">Introducción</h2>
+        <p>Al armar un equipo de cómputo para negocios, es importante seleccionar cuidadosamente los componentes que lo
+            conformarán. Esto permitirá maximizar su rendimiento, eficiencia y durabilidad.</p>
+        <p>Para ello, es necesario tener en cuenta una serie de factores, como el tipo de uso que se le dará al equipo,
+            la cantidad de usuarios que lo utilizarán, el presupuesto disponible y las necesidades específicas de la
+            empresa.</p>
+
+        <h2 class="unidadSubtitulo">Características de los negocios</h2>
+        <p>Los negocios suelen tener altas demandas de procesamiento y almacenamiento de datos debido a la cantidad de
+            información que manejan diariamente. Por esta razón, es necesario seleccionar componentes que sean capaces
+            de manejar grandes cantidades de información de manera eficiente.
+        </p>
+
+        <h2 class="unidadSubtitulo">Procesador</h2>
+        <p>El procesador es uno de los componentes más importantes del equipo de cómputo, ya que determina su velocidad
+            y capacidad de procesamiento. Para un equipo de negocios, se recomienda un procesador de gama media o alta,
+            como Intel Core i5 o i7, o AMD Ryzen 5 o 7.
+        </p>
+
+        <h2 class="unidadSubtitulo">RAM</h2>
+        <p>La memoria RAM es otro componente clave en el rendimiento del equipo de cómputo. Para un equipo de negocios,
+            se recomienda una cantidad mínima de 8GB de RAM, aunque lo ideal sería contar con 16GB o más.Esto permitirá
+            que el equipo pueda manejar múltiples aplicaciones y programas al mismo tiempo sin sufrir de lentitud o
+            bloqueos. Además, es importante elegir una memoria RAM de calidad y compatible con la placa madre
+            seleccionada.
+        </p>
+
+        <h2 class="unidadSubtitulo">Almacenamiento</h2>
+        <p>El disco duro es el componente encargado de almacenar toda la información del equipo de cómputo. Para un
+            equipo de negocios, se recomienda un disco duro de estado sólido (SSD) de al menos 256GB, aunque lo ideal
+            sería contar con un disco duro de mayor capacidad. Los discos duros SSD ofrecen una mayor velocidad de
+            lectura y escritura de datos, lo que se traduce en un mejor rendimiento del equipo. Sin embargo, también son
+            más costosos que los discos duros tradicionales de plato (HDD).
+        </p>
+
+        <h2 class="unidadSubtitulo">Tarjeta gráfica</h2>
+        <p>La tarjeta gráfica es un componente importante si se utilizan aplicaciones o programas que requieren de un
+            alto rendimiento gráfico, como diseño gráfico o edición de video. Para un equipo de negocios, se recomienda
+            una tarjeta gráfica de gama media o alta, como NVIDIA GeForce GTX o AMD Radeon RX. Es importante tener en
+            cuenta que no todos los equipos de negocios requieren de una tarjeta gráfica dedicada, por lo que se debe
+            evaluar si es necesario incluirla en la selección de componentes.
+        </p>
+
+        <img src="https://s3.us-east-2.amazonaws.com/ccp-prd-s3-uploads/2021/4/28/f5febb708cb1ee1f5dca4f194184a463ded32af2.jpeg"
+            alt="">
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="industria">3.3.2 Industria</h1>
+        <h2 class="unidadSubtitulo">Industria</h2>
+        <p>Los servicios de tecnología de información redefinieron el mercado en términos de cómo las organización
+            evalúan, comparan y seleccionan los servicios y como el vendedor desarrolla y establece precios de los
+            servicios.
+            se requiere un enfoque hacia las soluciones genéricas y esto debe ser responsabilidad de los proveedores,
+            que deben de desarrollar, operar y administrar el resultado de estos genéricos de TI.
+        </p>
+
+        <h2 class="unidadSubtitulo">Especificaciones de industria</h2>
+        <p>Puede haber requisitos específicos en cuanto al desempeño, capacidad de procesamiento, capacidad de
+            almacenamiento y seguridad de la computadora. Por ejemplo, en la industria del diseño gráfico y la
+            animación, se requiere una computadora con una tarjeta gráfica potente y una gran cantidad de memoria RAM
+            para poder trabajar con aplicaciones de alta demanda gráfica
+        </p>
+        <p>Las computadoras pueden requerir un procesador potente y una gran cantidad de memoria RAM para poder manejar
+            grandes conjuntos de datos y realizar cálculos complejos.
+        </p>
+        <p>Además, en una industria, también es importante considerar la compatibilidad de los componentes de la
+            computadora, ya que es posible que se requieran componentes especializados que no sean compatibles con todos
+            los tipos de hardware
+        </p>
+
+        <h2 class="unidadSubtitulo">Industria de ingeniería</h2>
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="comercio">3.3.3 Comercio electrónico</h1>
+        <h2 class="unidadSubtitulo">Definición</h2>
+        <p>El comercio electrónico es la compra y venta de bienes o servicios a través de Internet. Esto implica la
+            interacción entre los clientes y los proveedores a través de servicios de internet.
+        </p>
+
+        <h2 class="unidadSubtitulo">Relación con la arquitectura de computadoras</h2>
+        <p>El comercio electrónico está estrechamente relacionado con la arquitectura de computadoras porque su éxito
+            depende en gran medida de la infraestructura técnica detrás de él.
+        </p>
+        <p>Las plataformas de comercio electrónico requieren sistemas de hardware y software que sean confiables,
+            escalables y seguros. Esto incluye servidores web, bases de datos, redes de computadoras y sistemas de
+            seguridad.
+        </p>
+
+        <h2 class="unidadSubtitulo">Microservicios</h2>
+        <p>Los microservicios se utilizan para construir aplicaciones flexibles y adaptables a medida que cambian las
+            necesidades del negocio. De esta forma, nos ahorramos la necesidad de invertir miles o cientos de miles de
+            doláres en comprar servidores, almacenamiento y mucho más.
+        </p>
+        <p>Los más usados son el SAAS (Software As a Service), donde los proveedores proporcionan el hardware y el
+            software para llevar a cabo la logica del negocio, mantenimiento y la implementación de tecnologías, es
+            decir, ellos se encargan del software y arquitectura de computadoras.
+        </p>
+        <p>De esta forma podemos implementar las tecnologías necesarias para el comercio electrónico, como la
+            realización y verificación de pagos, gestión de inventario y demás.
+        </p>
+    </section>
+
+    <footer>
+        <p>Jesús Virgilio Sánchez Flores - 21051517</p>
+    </footer>
+</body>
+
+</html>
