@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#clasica">1.1 Modelos de arquitecturas de cómputo</a>
+                <ul>
+                    <li><a href="#clasica">1.1.1 Clásicas</a></li>
+                    <li><a href="#segmentada">1.1.2 Segmentadas</a></li>
+                    <li><a href="#multiprocesadores">1.1.3 Multiprocesadores</a></li>
+                </ul>
+            </li>
+            <li><a href="#arquitecturas">1.2 Análisis de los componentes</a>
+                <ul>
+                    <li><a href="#arquitecturas">1.2.1 Arquitecturas</a></li>
+                    <li><a href="#memoria">1.2.2 Memoria</a></li>
+                    <li><a href="#manejo">1.2.3 Manejo de Entrada/Salida</a></li>
+                    <li><a href="#buses">1.2.4 Buses</a></li>
+                    <li><a href="#interrupciones">1.2.5 interrupciones</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="clasica">1.1 Modelos de arquitecturas de cómputo</h1>
+        </center>
+
+        <br><br>
+        <h1 class="unidadTitulo" id="clasica">1.1.1 Arquitecturas clásicas</h1>
+
+        <h2 class="unidadSubtitulo">Arquitectura Von-Neumann</h2>
+        <p>Es una arquitectura de computadoras que consiste en una
+            unidad de procesamiento (abarca a la UC, la ALU y los registros
+            de procesador), una unidad de control (que abarca al registro
+            de instrucciones y al contador de programas), memoria,
+            almacenamiento, y mecanismos de entrada/salida. </p>
+        <p>El cuello de botella de Von-Neumann: Por compartir un mismo
+            bus para los datos y las instrucciones, las computadoras que siguen este modelo demuestran una
+            limitación en
+            la tasa de transferencia de datos entre el CPU y la memoria. Por lo mismo, aunque mejore la memoria y el
+            procesador de las computadoras, este cuello de botella limitará la velocidad de procesamiento.</p>
+        <img src="https://compilandoconocimiento.files.wordpress.com/2017/01/image01.png?w=788" alt="">
+
+
+        <h2 class="unidadSubtitulo">Arquitectura Harvard</h2>
+        <p>La arquitectura Harvard es una de las dos arquitecturas principales utilizadas en el diseño de computadoras.
+            En este tipo de arquitectura, la memoria de datos y la memoria de instrucciones se almacenan en dos sistemas
+            de memoria separados y físicamente distintos, lo que permite que se accedan y procesen simultáneamente.</p>
+
+        <p>A diferencia de la arquitectura Von Neumann, en la que la memoria de datos y la memoria de instrucciones se
+            almacenan en el mismo espacio de memoria, la arquitectura Harvard mejora la velocidad y la eficiencia del
+            procesamiento de datos. Al tener una memoria de instrucciones separada, la CPU puede acceder a ella de
+            manera más rápida y eficiente, ya que no tiene que buscar entre los datos almacenados para encontrar las
+            instrucciones.</p>
+
+        <p>Además, la arquitectura Harvard también permite un mayor ancho de banda de memoria y una mayor velocidad de
+            reloj, lo que se traduce en un mejor rendimiento y velocidad de procesamiento en general.</p>
+
+        <p>Aunque la arquitectura Harvard ha sido ampliamente utilizada en aplicaciones de alta velocidad como
+            procesadores de señal digital, controladores de robots y procesamiento de imágenes, también tiene algunas
+            limitaciones en términos de flexibilidad y capacidad de programación en comparación con la arquitectura Von
+            Neumann. En última instancia, la elección de la arquitectura dependerá de los requisitos específicos del
+            sistema y las aplicaciones en cuestión.</p>
+        <img src="https://compilandoconocimiento.files.wordpress.com/2017/01/image001.png?w=788" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="segmentada">1.1.2 Segmentadas</h1>
+
+        <p>La arquitectura de computadoras segmentadas es una técnica de diseño de procesadores que divide el proceso de
+            ejecución de una instrucción en varias etapas o segmentos. Cada segmento se encarga de realizar una tarea
+            específica, y los datos de entrada se pasan de un segmento a otro para su procesamiento.</p>
+
+        <p>La segmentación permite que varias instrucciones se procesen simultáneamente, lo que aumenta la velocidad y
+            la eficiencia del procesador. En lugar de esperar a que se complete una instrucción antes de comenzar a
+            procesar la siguiente, el procesador puede comenzar a procesar la siguiente instrucción en el siguiente
+            segmento mientras todavía se está procesando la anterior en el segmento anterior.</p>
+
+        <p>Además, la segmentación también facilita la implementación de técnicas de predicción de ramas, que permiten
+            al procesador predecir el camino que seguirá un programa y comenzar a procesar las instrucciones relevantes
+            antes de que se hayan resuelto las ramas condicionales.</p>
+
+        <p>La arquitectura de computadoras segmentadas se utiliza comúnmente en procesadores de alta gama, como los
+            utilizados en servidores, supercomputadoras y sistemas embebidos de alto rendimiento. Sin embargo, también
+            puede tener algunas desventajas, como un mayor consumo de energía y una mayor complejidad de diseño.</p>
+        <img src="data:image/png;base64,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"
+            alt="">
+
+        <p>Tipos de cauces:</p>
+        <ul class="listaUnidad circulo">
+            <li>Unifunción: ejecutan un único proceso.</li>
+            <li>Multifunción: pueden ejecutar varios procesos.</li>
+            <li>Estáticos: en un instante determinado sólo pueden ejecutar uno.</li>
+            <li>Dinámicos: pueden ejecutar simultáneamente varios procesos.</li>
+            <li>Lineal: a cada etapa sólo le puede seguir otra etapa concreta.</li>
+            <li>No lineal: se pueden establecer recorridos complejos de las etapas.</li>
+        </ul>
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="multiprocesadores">1.1.3 De multiprocesamiento</h1>
+
+        <p>La arquitectura de computadoras de multiprocesamiento es un tipo de diseño de computadoras que utiliza
+            múltiples procesadores para trabajar en conjunto y realizar tareas de procesamiento de datos. En esta
+            arquitectura, los procesadores comparten la carga de trabajo y coordinan sus operaciones para ejecutar
+            tareas de manera más rápida y eficiente que un solo procesador.</p>
+        <img src="https://4.bp.blogspot.com/_QTkgKtciYek/SlvFp1m7JnI/AAAAAAAAACQ/JOFObohlZSQ/w1200-h630-p-k-no-nu/sistM.jpg"
+            alt="">
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad circulo">
+            <li>Multiprocesamiento simétrico (SMP): en esta arquitectura, todos los procesadores tienen el mismo acceso
+                a la memoria y pueden realizar tareas similares. Los procesadores pueden compartir recursos y trabajar
+                en conjunto para realizar tareas, y el sistema operativo se encarga de distribuir la carga de trabajo
+                entre los procesadores disponibles.</li>
+            <li>Multiprocesamiento asimétrico (AMP): en esta arquitectura, los procesadores tienen diferentes roles y
+                responsabilidades. Algunos procesadores pueden ser más poderosos y estar diseñados para realizar tareas
+                específicas, mientras que otros procesadores pueden tener menos capacidad y se encargan de tareas menos
+                intensivas en recursos. El sistema operativo se encarga de distribuir las tareas según la capacidad y
+                los roles de cada procesador.</li>
+            <li>Clúster de computadoras: en esta arquitectura, varias computadoras independientes se combinan para
+                trabajar en conjunto en un sistema único. Cada computadora en el clúster tiene su propio procesador y
+                memoria, y se comunican entre sí para compartir recursos y realizar tareas. Los clústeres de
+                computadoras son comunes en aplicaciones de alta demanda de recursos, como la investigación científica y
+                el procesamiento de datos a gran escala.</li>
+        </ul>
+
+        <p>La arquitectura de multiprocesamiento puede proporcionar un mayor rendimiento y una mayor capacidad de
+            procesamiento que una arquitectura de un solo procesador. Sin embargo, también puede ser más compleja de
+            diseñar y administrar debido a la necesidad de coordinar y distribuir la carga de trabajo entre los
+            diferentes procesadores.</p>
+    </section>
+
+    <section class="fondo2 box">
+        <center>
+            <h1 class="unidadTema" id="arquitecturas">1.2 Análisis de los componentes</h1>
+        </center>
+
+        <br><br>
+        <h1 class="unidadTitulo" id="arquitecturas">1.2.1 Arquitecturas</h1>
+
+        <h2 class="unidadSubtitulo">Arquitecturas</h2>
+        <p>Funciones básicas de un computador son el procesamiento de datos, almacenamieto de datos, transferencia de
+            datos y control</p>
+
+        <h2 class="unidadSubtitulo">CPUs</h2>
+        <p>El CPU (Central Processing Unit), también conocido como procesador, es el componente principal de un
+            computador que se encarga de realizar las instrucciones y operaciones de procesamiento de datos. Es
+            considerado el "cerebro" de la computadora y está diseñado para interpretar y ejecutar instrucciones de
+            software.</p>
+        <p>El CPU se compone de varias partes, incluyendo la unidad de control (Control Unit) que es responsable de
+            controlar y coordinar las operaciones de la CPU, y la unidad aritmético-lógica (ALU) que realiza las
+            operaciones aritméticas y lógicas básicas, como sumas, restas, multiplicaciones, divisiones y operaciones
+            booleanas.</p>
+        <p>El CPU también incluye registros internos, que son pequeñas áreas de memoria de alta velocidad utilizadas
+            para almacenar temporalmente datos e instrucciones que se están procesando. El CPU accede a la memoria
+            principal para obtener instrucciones y datos de entrada/salida.</p>
+        <p>La velocidad y la capacidad del CPU afectan significativamente el rendimiento de la computadora, ya que la
+            velocidad del procesador determina cuántas instrucciones por segundo puede ejecutar. El rendimiento del CPU
+            también puede verse afectado por el número de núcleos y la capacidad de procesamiento simultáneo que tenga
+            el CPU.</p>
+        <p>En resumen, el CPU es el componente central de la computadora y es responsable de procesar las instrucciones
+            y operaciones de procesamiento de datos, lo que permite que la computadora realice tareas complejas y
+            diversas.</p>
+        <img src="https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/How%20to%20Stress%20Test%20Your%20CPU/How_to_stress_test_your_CPU-Hero.jpg"
+            alt="">
+
+        <h2 class="unidadSubtitulo">ALU</h2>
+        <p>La ALU (Arithmetic Logic Unit) es un componente clave del CPU (Central Processing Unit) de una computadora, y
+            es responsable de realizar operaciones aritméticas y lógicas básicas en los datos que recibe de la memoria
+            principal.</p>
+        <p>Las operaciones aritméticas incluyen sumas, restas, multiplicaciones y divisiones, mientras que las
+            operaciones lógicas incluyen AND, OR, NOT y XOR. La ALU también puede realizar operaciones de comparación,
+            como determinar si un número es mayor o menor que otro.</p>
+        <p>La ALU está compuesta por una serie de circuitos lógicos que pueden realizar estas operaciones en paralelo,
+            lo que permite que se realicen múltiples operaciones al mismo tiempo. Además, la ALU suele estar equipada
+            con registros internos que se utilizan para almacenar temporalmente los datos y las instrucciones que se
+            están procesando.</p>
+        <p>La velocidad y la capacidad de la ALU son factores importantes que afectan el rendimiento general del CPU y
+            de la computadora. Un CPU con una ALU más rápida puede procesar más datos en menos tiempo y ejecutar
+            instrucciones más complejas en un menor tiempo. Por otro lado, una ALU más grande y con mayor capacidad de
+            procesamiento simultáneo puede permitir al CPU realizar más operaciones al mismo tiempo, lo que aumenta el
+            rendimiento general de la computadora.</p>
+        <p>En resumen, la ALU es un componente fundamental del CPU que realiza operaciones aritméticas y lógicas básicas
+            en los datos y las instrucciones que se reciben de la memoria principal, lo que permite que la computadora
+            realice tareas complejas y diversas.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/640px-ALU_block.gif" alt="">
+
+        <h2 class="unidadSubtitulo">Ciclo de instrucciones</h2>
+        <p>El ciclo de instrucciones de un PC (computadora personal) consta de tres etapas principales: Fetch (buscar),
+            Decode (decodificar) y Execute (ejecutar). Cada una de estas etapas se encarga de procesar una parte de una
+            instrucción de la CPU. A continuación, se explica cada una de ellas en detalle:</p>
+
+        <ul class="listaUnidad numero">
+            <li>Fetch: En esta etapa, la CPU obtiene la siguiente instrucción de la memoria principal y la coloca en
+                el
+                registro de instrucciones. La dirección de la instrucción se almacena en el contador de programa (PC),
+                que apunta a la dirección de memoria de la próxima instrucción a buscar. En resumen, la etapa de Fetch
+                busca la instrucción desde la memoria principal y la carga en la CPU.</li>
+            <li>Decode: En esta etapa, la CPU analiza la instrucción que se ha cargado previamente en el registro de
+                instrucciones y la decodifica para determinar qué operación debe realizar la CPU. La CPU divide la
+                instrucción en sus componentes básicos, como la operación y los operandos, y determina cómo se
+                utilizarán en la etapa de ejecución.</li>
+            <li>Decode: En esta etapa, la CPU analiza la instrucción que se ha cargado previamente en el registro de
+                instrucciones y la decodifica para determinar qué operación debe realizar la CPU. La CPU divide la
+                instrucción en sus componentes básicos, como la operación y los operandos, y determina cómo se
+                utilizarán en la etapa de ejecución.</li>
+        </ul>
+        <img src="https://hardzone.es/app/uploads-hardzone.es/2020/11/Unidad-Control-Ciclo-Instruccion.jpg" alt="">
+
+        <p>Una vez finalizada la etapa de ejecución, la CPU vuelve a la etapa de Fetch y comienza a buscar la siguiente
+            instrucción. El ciclo de instrucciones continúa hasta que se completa el programa o el usuario interrumpe la
+            ejecución. Es importante mencionar que el rendimiento de la CPU se mide en ciclos de reloj, que son la
+            cantidad de ciclos de instrucciones que se ejecutan en un segundo.</p>
+
+        <h2 class="unidadSubtitulo">Registros</h2>
+        <p>Los registros son pequeñas áreas de almacenamiento de alta velocidad que se encuentran dentro del CPU
+            (Central Processing Unit) de una computadora. Estos registros se utilizan para almacenar temporalmente datos
+            e instrucciones que se están procesando, lo que permite al CPU acceder a ellos más rápidamente que si
+            tuviera que acceder a la memoria principal. Los registros se utilizan para diferentes propósitos dentro del
+            CPU, incluyendo: </p>
+
+        <ul class="listaUnidad circulo">
+            <li>Almacenamiento temporal de datos: Los registros se utilizan para almacenar temporalmente datos que se
+                están procesando en la ALU (Arithmetic Logic Unit) del CPU. Por ejemplo, los datos que se están sumando
+                o multiplicando se almacenan en registros temporales dentro del CPU para que puedan ser procesados más
+                rápidamente.</li>
+            <li>Almacenamiento de direcciones de memoria: Los registros también se utilizan para almacenar las
+                direcciones de memoria de los datos o instrucciones que se están procesando. Esto permite al CPU acceder
+                rápidamente a la memoria principal para recuperar los datos o instrucciones necesarios.</li>
+            <li>Almacenamiento de punteros de instrucciones: Los registros también pueden utilizarse para almacenar el
+                puntero de instrucción, que indica la dirección de memoria de la siguiente instrucción que se debe
+                ejecutar.</li>
+        </ul>
+
+        <p>Cada CPU tiene un número limitado de registros disponibles y, por lo general, se utilizan para diferentes
+            propósitos dentro del CPU. Los registros más importantes suelen ser los registros de propósito general, que
+            se utilizan para almacenar temporalmente datos e instrucciones que se están procesando en la ALU.</p>
+        <p>En resumen, los registros son áreas de almacenamiento de alta velocidad dentro del CPU que se utilizan para
+            almacenar temporalmente datos e instrucciones que se están procesando. Los registros permiten que el CPU
+            acceda a estos datos e instrucciones más rápidamente que si tuviera que acceder a la memoria principal.</p>
+
+        <h2 class="unidadSubtitulo">Buses</h2>
+        <p>Los buses son vías de comunicación que permiten la transferencia de datos e instrucciones entre los
+            diferentes componentes de una computadora, como el CPU (Central Processing Unit), la memoria principal, las
+            unidades de entrada/salida y otros dispositivos periféricos. Los buses pueden ser físicos, como los cables
+            que conectan los componentes, o lógicos, como las señales que se transmiten a través de estos cables.</p>
+
+        <p>Los buses juegan un papel importante en la eficiencia y el rendimiento de una computadora. Un bus más ancho y
+            rápido permite una transferencia de datos más rápida entre los componentes, lo que puede mejorar el
+            rendimiento general de la computadora. Por otro lado, un bus más lento o congestionado puede limitar la
+            velocidad de transferencia de datos y afectar negativamente el rendimiento de la computadora.</p>
+        <p>En resumen, los buses son canales de comunicación que permiten la transferencia de datos e instrucciones
+            entre los diferentes componentes de una computadora. Los diferentes tipos de buses, como el bus de datos, el
+            bus de direcciones y el bus de control, juegan un papel importante en la eficiencia y el rendimiento de la
+            computadora.</p>
+        <img src="https://conceptoabc.com/wp-content/uploads/2020/03/tecnolopedia-portada-bus-de-datos-e1621007118167.jpg"
+            alt="">
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="memoria">1.2.2 Memoria</h1>
+
+        <p>Las memorias son componentes fundamentales en cualquier computadora, ya que se utilizan para almacenar datos
+            e instrucciones que el CPU necesita para realizar sus operaciones. En general, se pueden distinguir dos
+            tipos principales de memorias: la memoria principal y la memoria secundaria.</p>
+
+        <ul class="listaUnidad">
+            <li>Memoria principal: también conocida como RAM (Random Access Memory), es la memoria de acceso aleatorio
+                donde se almacenan temporalmente los datos e instrucciones que el CPU necesita para realizar sus
+                operaciones. La memoria RAM es volátil, lo que significa que los datos se pierden cuando se apaga la
+                computadora. La velocidad de la memoria RAM es importante para el rendimiento general de la computadora,
+                ya que una memoria más rápida permite al CPU acceder a los datos e instrucciones más rápidamente.</li>
+            <li>Memoria secundaria: también conocida como almacenamiento secundario, se utiliza para almacenar datos e
+                instrucciones de manera permanente. Los ejemplos más comunes de memoria secundaria son los discos duros
+                y las unidades de estado sólido (SSD). A diferencia de la memoria RAM, la memoria secundaria no es
+                volátil, lo que significa que los datos se mantienen incluso cuando se apaga la computadora.</li>
+        </ul>
+
+        <p>Además de estos dos tipos principales de memorias, existen otros tipos de memorias especializadas, como la
+            memoria caché, que es una memoria de alta velocidad que se utiliza para almacenar temporalmente los datos e
+            instrucciones más utilizados por el CPU. La memoria caché ayuda a mejorar el rendimiento de la computadora
+            al reducir la cantidad de veces que el CPU tiene que acceder a la memoria principal.</p>
+        <p>En resumen, las memorias son componentes fundamentales de cualquier computadora, y se utilizan para almacenar
+            datos e instrucciones. La memoria principal o RAM se utiliza para almacenar temporalmente los datos e
+            instrucciones que el CPU necesita para realizar sus operaciones, mientras que la memoria secundaria se
+            utiliza para almacenar datos e instrucciones de manera permanente. Además, existen otros tipos de memorias
+            especializadas, como la memoria caché, que ayudan a mejorar el rendimiento general de la computadora.</p>
+        <h2 class="unidadSubtitulo">Ram</h2>
+        <p>La RAM (Random Access Memory) es un tipo de memoria volátil utilizada en las computadoras para almacenar
+            temporalmente datos e instrucciones a los que el procesador necesita acceder con frecuencia. Es llamada "de
+            acceso aleatorio" porque el procesador puede acceder a cualquier ubicación de la memoria en cualquier
+            momento, de forma aleatoria y sin tener que seguir una secuencia ordenada.</p>
+        <p>La RAM es un tipo de memoria de lectura y escritura, lo que significa que el procesador puede leer y escribir
+            datos en ella. La RAM es un tipo de memoria volátil, lo que significa que pierde los datos que almacena
+            cuando la computadora se apaga o reinicia. Por lo tanto, cualquier información importante que se desee
+            conservar debe ser almacenada en otro tipo de memoria no volátil, como un disco duro o una unidad de estado
+            sólido (SSD).</p>
+        <p>La cantidad de RAM en una computadora es un factor importante para su rendimiento. Cuanta más RAM tenga una
+            computadora, más rápido podrá acceder el procesador a los datos e instrucciones almacenados en ella. Una
+            cantidad insuficiente de RAM puede hacer que una computadora se vuelva lenta y su rendimiento sea
+            deficiente.</p>
+        <p>En resumen, la RAM es un tipo de memoria volátil utilizada en las computadoras para almacenar temporalmente
+            datos e instrucciones a los que el procesador necesita acceder con frecuencia. Es importante tener
+            suficiente RAM en una computadora para garantizar un rendimiento óptimo.</p>
+        <img src="https://static4.arrow.com/-/media/arrow/images/1400-x-1400/memory-types.jpg" alt="">
+
+        <h2 class="unidadSubtitulo">Cache</h2>
+        <p>La memoria caché es una memoria de acceso rápido y de alta velocidad utilizada en las computadoras para
+            mejorar el rendimiento del procesador. Se encuentra ubicada entre la unidad central de procesamiento (CPU) y
+            la memoria principal (RAM) y actúa como un buffer temporal que almacena los datos e instrucciones que el
+            procesador necesita acceder con mayor frecuencia.</p>
+        <p>La memoria caché es más rápida que la memoria RAM, lo que significa que el procesador puede acceder a los
+            datos e instrucciones almacenados en ella mucho más rápido. La memoria caché ayuda a reducir el número de
+            veces que el procesador debe acceder a la memoria RAM, lo que a su vez ayuda a mejorar el rendimiento
+            general de la computadora.</p>
+        <p>Existen diferentes niveles de memoria caché en una computadora. El nivel 1 (L1) es la caché más pequeña y
+            rápida, ubicada directamente en el procesador. El nivel 2 (L2) es una caché más grande y más lenta que se
+            encuentra en la placa madre de la computadora. El nivel 3 (L3) es una caché aún más grande que se encuentra
+            en algunos procesadores.</p>
+        <p>La memoria caché es un tipo de memoria volátil, lo que significa que pierde los datos que almacena cuando se
+            apaga la computadora. Sin embargo, debido a que solo almacena datos e instrucciones temporalmente, no es
+            necesario que sea no volátil.</p>
+        <p>En resumen, la memoria caché es una memoria de acceso rápido y de alta velocidad utilizada en las
+            computadoras para mejorar el rendimiento del procesador. Se encuentra ubicada entre el procesador y la
+            memoria RAM y actúa como un buffer temporal para los datos e instrucciones más utilizados. La memoria caché
+            es un componente importante en la mejora del rendimiento general de una computadora.</p>
+        <img src="https://i.blogs.es/999fe3/cache-android-4/1366_2000.jpg" alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="manejo">1.2.3 Manejo de Entrada/Salida</h1>
+
+        <p>El manejo de entrada/salida (E/S) se refiere al proceso de transferir datos entre un sistema informático y
+            dispositivos externos, como unidades de almacenamiento, teclados, monitores, impresoras y dispositivos de
+            red. En una computadora, el procesador se encarga de la ejecución de programas y la realización de cálculos,
+            mientras que el sistema de E/S maneja la comunicación con dispositivos externos.</p>
+        <p>El controlador de E/S es un componente hardware que se encarga de la comunicación entre el sistema
+            informático y los dispositivos de E/S. El controlador de E/S se comunica con los dispositivos de E/S
+            utilizando un protocolo específico y se encarga de la gestión de los recursos, la administración de la
+            memoria y el control de los datos que se transfieren.</p>
+        <p>El manejo de E/S puede ser realizado mediante diferentes métodos, como el acceso directo a memoria (DMA), la
+            interrupción y la programación de E/S. El DMA permite a los dispositivos de E/S acceder directamente a la
+            memoria del sistema sin la intervención del procesador, lo que mejora el rendimiento. La interrupción es un
+            mecanismo que permite al dispositivo de E/S interrumpir el procesamiento normal del sistema y solicitar
+            atención inmediata del procesador. La programación de E/S se utiliza para transferir datos entre el
+            procesador y el dispositivo de E/S mediante la emisión de comandos específicos de E/S.</p>
+
+        <h2 class="unidadSubtitulo">Módulos de entrada/salida</h2>
+        <p>Los módulos de entrada/salida, también conocidos como controladores de dispositivos, son componentes
+            importantes en la arquitectura de una computadora que permiten la comunicación entre el procesador y los
+            dispositivos de entrada/salida, como el teclado, el mouse, la pantalla y las unidades de almacenamiento
+            externas. Existen diferentes tipos de módulos de entrada/salida, cada uno diseñado para manejar un tipo
+            específico de
+            dispositivo. Algunos ejemplos comunes incluyen:</p>
+        <ul class="listaUnidad numero">
+            <li>Controlador de disco: Este módulo maneja las operaciones de entrada/salida para las unidades de disco
+                duro y las unidades de estado sólido (SSD).</li>
+            <li>Controlador de pantalla: Este módulo maneja la salida de video a la pantalla y puede ser responsable de
+                controlar la resolución, el brillo y otros ajustes de visualización.</li>
+            <li>Controlador de red: Este módulo maneja la comunicación con dispositivos de red, como tarjetas de red y
+                módems.</li>
+            <li>Controlador USB: Este módulo maneja los dispositivos USB conectados a la computadora, como dispositivos
+                de almacenamiento externos y dispositivos de entrada/salida.</li>
+        </ul>
+
+        <p>Cada módulo de entrada/salida tiene su propio conjunto de instrucciones y protocolos de comunicación que
+            permiten la transferencia de datos entre el procesador y el dispositivo correspondiente. La gestión de estos
+            módulos se realiza a través de software específico, que puede ser parte del sistema operativo o de programas
+            de aplicaciones específicas.</p>
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="buses">1.2.4 Buses</h1>
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <p>En la arquitectura de una computadora, los buses son canales de comunicación que permiten la transferencia de
+            datos entre los diferentes componentes del sistema. Existen diferentes tipos de buses, cada uno diseñado
+            para un propósito específico. A continuación se presentan algunos de los tipos de buses más comunes:</p>
+
+        <ul class="listaUnidad numero">
+            <li>Bus de datos: es el canal de comunicación por el cual se transmiten los datos entre los diferentes
+                componentes de la computadora, como el CPU y la memoria principal. El tamaño del bus de datos determina
+                la cantidad de datos que se pueden transferir en un solo ciclo de reloj del sistema.</li>
+            <li>Bus de direcciones: es el canal de comunicación por el cual se transmiten las direcciones de memoria,
+                que indican la ubicación de los datos o instrucciones que se deben leer o escribir.</li>
+            <li>Bus de control: es el canal de comunicación por el cual se transmiten las señales de control que
+                coordinan y sincronizan las operaciones de los diferentes componentes de la computadora. Esto incluye
+                señales para iniciar y detener operaciones, señales de sincronización y señales de interrupción.</li>
+            <li>Bus del sistema: Este tipo de bus interconecta todos los componentes principales de la computadora,
+                incluyendo el procesador, la memoria, los dispositivos de entrada/salida y otros buses. El ancho de
+                banda de este bus es importante para determinar la velocidad de comunicación entre los componentes del
+                sistema.</li>
+            <li>Bus periférico: Este bus se utiliza para conectar dispositivos de entrada/salida periféricos a la
+                computadora, como dispositivos de almacenamiento externos, impresoras y cámaras.</li>
+            <li>Bus de expansión: Este bus se utiliza para agregar funcionalidad a la computadora mediante la adición de
+                tarjetas de expansión, como tarjetas de sonido, tarjetas de red y tarjetas gráficas.</li>
+        </ul>
+        <p>Cada uno de estos tipos de buses tiene su propia velocidad de transferencia de datos y ancho de banda, lo que
+            afecta la eficiencia y el rendimiento general del sistema.</p>
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="interrupciones">1.2.5 Interrupciones</h1>
+
+        <p>Una interrupción (del inglés Interrupt Request, también conocida como petición de interrupción) es una señal
+            recibida por el procesador de un ordenador, indicando que debe "interrumpir" el curso de ejecución
+            actual y pasar a ejecutar código específico para tratar esta situación.</p>
+        <p>Es una suspensión temporal de la ejecución de un proceso, para pasar a ejecutar una subrutina de servicio de
+            interrupción.</p>
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad numero">
+            <li>Interrupciones de hardware: son aquellas que se generan por eventos en dispositivos externos a la CPU,
+                como el teclado, el mouse, la impresora, el disco duro, entre otros.</li>
+            <li>Interrupciones de software: son aquellas que se generan por instrucciones de software que solicitan la
+                atención del procesador, como una llamada al sistema operativo o una interrupción de software
+                programada.</li>
+            <li>Excepciones: son interrupciones generadas por eventos inesperados durante la ejecución de un programa,
+                como una división por cero o un acceso a memoria no autorizado.</li>
+            <li>Trampas: son interrupciones generadas intencionalmente por el programa en ejecución, como una
+                interrupción de depuración para permitir la depuración de un programa.</li>
+            <li>Interrupciones de temporizador: son interrupciones generadas por un temporizador interno del sistema
+                para realizar tareas programadas en intervalos regulares de tiempo, como la actualización de la pantalla
+                o el mantenimiento del reloj del sistema.</li>
+        </ul>
+
+        <p>La arquitectura de multiprocesamiento puede proporcionar un mayor rendimiento y una mayor capacidad de
+            procesamiento que una arquitectura de un solo procesador. Sin embargo, también puede ser más compleja de
+            diseñar y administrar debido a la necesidad de coordinar y distribuir la carga de trabajo entre los
+            diferentes procesadores.</p>
+    </section>
+
+    <footer>
+        <p>Jesús Virgilio Sánchez Flores - 21051517</p>
+    </footer>
+</body>
+
+</html>

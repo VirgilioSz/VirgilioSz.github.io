@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#organizacion.html">2.1 Organización del procesador</a></li>
+            <li><a href="#estructuras">2.2 Estructuras de registros</a>
+                <ul>
+                    <li><a href="#registros">2.2.1 Registros visibles para el usuario</a></li>
+                    <li><a href="#control">2.2.2 Registros de control y de estados</a></li>
+                </ul>
+            </li>
+            <li><a href="#ciclos">2.3 El ciclo de instrucciones</a>
+                <ul>
+                    <li><a href="#ciclo">2.3.1 Ciclo Fetch-Decode-Execute</a></li>
+                    <li><a href="#segmentacion">2.3.2 Segmentación de instrucciones</a></li>
+                    <li><a href="#conjunto">2.3.3 Conjunto de instrucciones</a></li>
+                </ul>
+            </li>
+            <li><a href="#modos">2.4 Modos de direccionamiento</a></li>
+        </ul>
+    </nav>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="organizacion">2.1 Organización del procesador</h1>
+        </center>
+
+        <br><br>
+
+        <p>La organización del procesador se refiere a la estructura y diseño interno de un microprocesador, que incluye
+            sus componentes y cómo se relacionan entre sí para llevar a cabo las operaciones de procesamiento de datos.
+            La organización del procesador determina cómo se ejecutan las instrucciones, cómo se accede y almacena la
+            información en la memoria, y cómo se realizan las operaciones aritméticas y lógicas. Algunos de los
+            componentes clave de la organización del procesador incluyen:</p>
+
+        <ul class="listaUnidad numero">
+            <li>Unidad de control: Es responsable de interpretar y ejecutar las instrucciones del programa. Controla la
+                secuencia de ejecución de las instrucciones y coordina el flujo de datos entre los diferentes
+                componentes del procesador.</li>
+            <li>Unidad aritmético-lógica (ALU): Es el componente encargado de realizar las operaciones aritméticas (como
+                suma, resta, multiplicación y división) y lógicas (como AND, OR, XOR) en los datos. La ALU realiza las
+                operaciones solicitadas por las instrucciones del programa.</li>
+            <li>Registros: Son elementos de almacenamiento de alta velocidad que se utilizan para guardar datos
+                temporales, direcciones de memoria y resultados parciales durante la ejecución de instrucciones. Los
+                registros ofrecen una rápida accesibilidad a los datos y juegan un papel crucial en el rendimiento del
+                procesador.</li>
+            <li>Unidad de memoria: Se encarga de acceder y transferir datos entre la memoria principal y el procesador.
+                Esto incluye la lectura y escritura de instrucciones y datos en la memoria.</li>
+            <li>Buses: Son los canales de comunicación que permiten la transferencia de datos, direcciones y señales de
+                control entre los diferentes componentes del procesador y otros dispositivos.</li>
+        </ul>
+        <img src="https://images.slideplayer.es/116/18108427/slides/slide_6.jpg">
+        <p>La organización del procesador puede variar según la arquitectura específica, como la arquitectura de von
+            Neumann o la arquitectura de Harvard. Cada organización tiene sus propias características y ventajas, pero
+            en general, el objetivo es maximizar el rendimiento y la eficiencia en la ejecución de instrucciones y el
+            procesamiento de datos.</p>
+    </section>
+
+    <section class="fondo2 box">
+        <center>
+            <h1 class="unidadTema" id="estructuras">2.2 Estructuras de registros</h1>
+        </center>
+
+        <br><br>
+
+        <p>Los registros son componentes de almacenamiento de alta velocidad dentro de un procesador, que se utilizan
+            para almacenar y manipular datos temporalmente durante la ejecución de instrucciones. Los registros son
+            elementos esenciales de la organización del procesador y desempeñan un papel fundamental en el procesamiento
+            de datos.</p>
+        <img
+            src="https://image.slidesharecdn.com/diagramadebloquesdeuncomputador-140304200540-phpapp02/85/diagrama-de-bloques-de-un-computador-9-320.jpg?cb=1666668302">
+
+        <h2 class="unidadSubtitulo">Tipos</h2>
+        <ul class="listaUnidad numero">
+            <li>Registros de propósito general: Estos registros son utilizados para almacenar datos temporales y
+                resultados intermedios durante la ejecución de instrucciones. Se utilizan para realizar operaciones
+                aritméticas y lógicas, así como para almacenar direcciones de memoria y datos de entrada/salida.</li>
+            <li>Registro de instrucción: También conocido como contador de programa (PC, por sus siglas en inglés), es
+                un registro especial que almacena la dirección de memoria de la próxima instrucción a ejecutar.</li>
+            <li>Registro de direcciones: Almacena la dirección de memoria de los datos o instrucciones que se están
+                accediendo o modificando.</li>
+            <li>Registro de datos: Almacena los datos que se están utilizando o manipulando durante la ejecución de
+                instrucciones.</li>
+            <li>Registro de estado: Mantiene información sobre el estado actual del procesador, como indicadores de
+                desbordamiento, banderas de condición y estado de interrupción.</li>
+        </ul>
+
+        <h1 class="unidadTitulo" id="registros">2.2.1 Registros visibles para el usuario</h1>
+        <p>Los registros visibles para el usuario, también conocidos como registros visibles a nivel de arquitectura,
+            son aquellos registros que están directamente accesibles y utilizables por los programadores y los
+            compiladores al escribir programas. Estos registros son parte de la interfaz de programación de una
+            arquitectura de procesador y pueden ser utilizados para almacenar datos y realizar operaciones en programas.
+            Los registros visibles para el usuario varían según la arquitectura del procesador, pero suelen incluir
+            registros de propósito general y registros especiales.</p>
+
+        <img
+            src="https://lh3.googleusercontent.com/blogger_img_proxy/AByxGDQUWvsgJK7N38wPXu0jlj6TWkUhfA_dIY-65LsaXTALltwuJdLzJzNIVamvYfwrc8I0Fs0px9L9slIkCThgRINMmd407D4jJfMUNoEaum2PQ0VYo0U0kbKkoFnfYcfg9SHpwMkpzS6X3i23MMFF0LqYXS2Q4A1WTAA=w1200-h630-p-k-no-nu">
+
+        <p>Los registros visibles para el usuario son importantes ya que proporcionan una interfaz directa y eficiente
+            para que los programadores y los compiladores trabajen con el procesador. Los programas se comunican con
+            estos registros para almacenar y recuperar datos, realizar operaciones y tomar decisiones basadas en las
+            banderas y el estado del procesador.</p>
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="control">2.2.2 Registros de control y de estados</h1>
+
+        <p>Los registros de control y de estados son componentes importantes en la arquitectura de un procesador. A
+            continuación, se explica brevemente cada tipo de registro:</p>
+        <ul class="listaUnidad numero">
+            <li>Registros de control: Estos registros se utilizan para controlar y coordinar diversas operaciones del
+                procesador. Algunos ejemplos de registros de control son:
+                <ul class="listaUnidad circulo">
+                    <li>Registro de control de memoria: Se encarga de gestionar las operaciones de lectura y escritura
+                        en la memoria, controlando los ciclos de lectura y escritura, así como las señales de control
+                        asociadas.</li>
+                    <li>Registro de control de interrupciones: Controla la habilitación o deshabilitación de las
+                        interrupciones del procesador. Permite al programador o al sistema operativo establecer qué
+                        eventos externos pueden interrumpir la ejecución normal del procesador.</li>
+                    <li>Registro de control de temporizador: Se utiliza para configurar y controlar un temporizador
+                        interno del procesador, que puede generar interrupciones periódicas o activar acciones
+                        programadas.</li>
+                </ul>
+            </li>
+
+            <li>Registros de estados: Los registros de estados almacenan información sobre el estado actual del
+                procesador y su ejecución. Estos registros suelen incluir:
+                <ul class="listaUnidad circulo">
+                    <li>Registro de banderas o flags: Contiene banderas o indicadores que reflejan el resultado de
+                        operaciones aritméticas o lógicas anteriores. Por ejemplo, puede tener una bandera de cero que
+                        se establece cuando el resultado de una operación es cero.</li>
+                    <li>Registro de estado de excepción: Registra la información sobre excepciones y errores producidos
+                        durante la ejecución de instrucciones. Puede almacenar el tipo de excepción, la dirección del
+                        error o información relevante para su posterior manejo.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <img src="https://2.bp.blogspot.com/-jSfNRyGQbPE/VU2gQlpgYOI/AAAAAAAAACo/jIAqIIecNd4/s400/10.jpg">
+        <p>Estos registros de estados permiten que el procesador controle y gestione situaciones excepcionales o errores
+            durante la ejecución de instrucciones y brindan información útil para el manejo de errores y depuración de
+            programas.</p>
+
+        <p>Los registros de control y de estados son fundamentales para el funcionamiento y control del procesador,
+            proporcionando una interfaz para ajustar su comportamiento y mantener información relevante sobre su estado
+            actual.</p>
+        <img src="https://is603arquicom2016.files.wordpress.com/2016/08/h3b-f1.gif">
+    </section>
+
+    <section class="fondo2 box">
+        <center>
+            <h1 class="unidadTema" id="ciclos">2.3 El ciclo de instrucciones</h1>
+        </center>
+
+        <br><br>
+        <h2 class="unidadSubtitulo">CISC</h2>
+        <p>La arquitectura CISC se caracteriza por tener un conjunto de instrucciones complejas y variadas. Estas
+            instrucciones pueden realizar múltiples tareas en una sola instrucción, lo que se conoce como instrucciones
+            de formato variable. Los procesadores CISC suelen tener un mayor número de instrucciones y modos de
+            direccionamiento que permiten operaciones más complejas.</p>
+        <p>Las ventajas de CISC incluyen la capacidad de realizar operaciones complejas en una sola instrucción y la
+            compatibilidad con lenguajes de programación de alto nivel. Sin embargo, los procesadores CISC pueden ser
+            más complejos de diseñar y tienen un mayor consumo de energía debido a su complejidad.</p>
+
+        <img src="https://forum.huawei.com/enterprise/es/data/attachment/forum/202206/10/144018phakeoa3es5dx9ki.png">
+
+        <h2 class="unidadSubtitulo">RISC</h2>
+        <p>La arquitectura RISC se caracteriza por tener un conjunto de instrucciones reducido y simples. En los
+            procesadores RISC, las instrucciones están diseñadas para realizar tareas básicas de forma eficiente. Esto
+            permite una ejecución más rápida y eficiente de las instrucciones, ya que se siguen principios como
+            "load-store" (cargar-almacenar), donde las operaciones de memoria se realizan únicamente mediante
+            instrucciones específicas.</p>
+        <p>Las ventajas de RISC incluyen una mayor eficiencia en la ejecución de instrucciones, un diseño más simple y
+            un menor consumo de energía. Sin embargo, las operaciones más complejas pueden requerir múltiples
+            instrucciones y, en algunos casos, los programas pueden ser más largos.</p>
+
+        <img src="https://forum.huawei.com/enterprise/es/data/attachment/forum/202211/07/154400bwy812i180svinv8.png">
+
+        <h2 class="unidadSubtitulo">SISC</h2>
+        <p>La arquitectura SISC combina características de CISC y RISC. SISC se refiere a procesadores que implementan
+            un enfoque RISC en la etapa de ejecución de las instrucciones, pero conservan características CISC en la
+            etapa de decodificación de las instrucciones. Estos procesadores pueden ejecutar múltiples instrucciones en
+            paralelo utilizando técnicas como la ejecución fuera de orden y la ejecución especulativa.</p>
+        <p>La arquitectura SISC tiene como objetivo combinar la eficiencia de ejecución de las instrucciones RISC con la
+            capacidad de manejar instrucciones complejas de CISC. Esto permite un rendimiento mejorado y un equilibrio
+            entre flexibilidad y eficiencia.</p>
+
+        <h1 class="unidadTitulo" id="ciclo">2.3.1 Ciclo Fetch-Decode-Execute</h1>
+        <p>El ciclo Fetch-Decode-Execute (obtener-decodificar-ejecutar) es un proceso fundamental en la ejecución de
+            instrucciones en una arquitectura de computadora. Se refiere al conjunto de pasos que se repiten para
+            recuperar, decodificar y ejecutar las instrucciones de un programa en un procesador.</p>
+
+        <h2 class="unidadSubtitulo">Fetch (Obtener):</h2>
+        <p>En esta etapa, el procesador recupera la siguiente instrucción del programa de la memoria principal. Utiliza
+            el contador de programa (Program Counter, PC) para obtener la dirección de memoria donde se encuentra la
+            siguiente instrucción a ejecutar. El valor del PC se incrementa para apuntar a la siguiente instrucción.</p>
+
+        <h2 class="unidadSubtitulo">Decode (Decodificar):</h2>
+        <p>En esta etapa, la instrucción recuperada en la etapa anterior se decodifica. Esto implica interpretar la
+            instrucción y determinar la operación a realizar y los operandos involucrados. El decodificador del
+            procesador analiza el código de la instrucción y extrae los campos relevantes, como el código de operación y
+            los registros o direcciones de memoria involucrados.</p>
+
+        <h2 class="unidadSubtitulo">Execute (Ejecutar):</h2>
+        <p>En esta etapa, se ejecuta la operación especificada por la instrucción decodificada. Esto implica realizar
+            las operaciones aritméticas, lógicas o de transferencia de datos según los operandos y el código de
+            operación identificados en la etapa de decodificación. El resultado puede ser almacenado en registros, en
+            memoria o utilizado para actualizar el estado del procesador.</p>
+
+        <img src="https://hardzone.es/app/uploads-hardzone.es/2020/11/Unidad-Control-Ciclo-Instruccion.jpg">
+
+        <p>Una vez que se completa la etapa de ejecución, el ciclo se repite para la siguiente instrucción, comenzando
+            nuevamente con la etapa de Fetch. Esto permite la ejecución secuencial de instrucciones en un programa.</p>
+        <p>El ciclo Fetch-Decode-Execute se repite continuamente hasta que se completa la ejecución del programa o se
+            encuentra una instrucción de finalización. Durante este ciclo, el procesador va obteniendo, decodificando y
+            ejecutando instrucciones una tras otra, permitiendo la ejecución de programas de manera secuencial y
+            ordenada.</p>
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="segmentacion">2.3.2 Segmentación de instrucciones</h1>
+
+        <p>Es una técnica para ejecutar
+            paralela o simultáneamente
+            instrucciones de un programa
+            dentro de un mismo procesador.
+            Esta técnica abarca todo el
+            procesador dividiendo una
+            instrucción en subinstrucciones.</p>
+
+        <h2 class="unidadSubtitulo">¿Qué es segmentación de instrucciones?</h2>
+        <ul class="listaUnidad circulo">
+            <li>Es una forma efectiva para organiza e lhw de la CPU para realizar más de
+                una operación al mismo tiempo</li>
+            <li>Consiste en descomponer el proceso de ejecución de las instrucciones en
+                fases o etapas que permitan una ejecución simultánea</li>
+            <li>Explota el paralelismo entre las instrucciones de un flujo secuencial</li>
+        </ul>
+        <h2 class="unidadSubtitulo">Proceso</h2>
+        <p>Un proceso es una
+            instancia (un caso) de un
+            programa en ejecución
+            que tiene reservada una
+            sección en la memoria.
+            Mientras que “un
+            programa” se refiere a las
+            instrucciones
+            almacenadas, un proceso
+            se refiere a la ejecución
+            de estas instrucciones.</p>
+        <h2 class="unidadSubtitulo">Hilo</h2>
+        <p>Es uno de los, a veces, varios caminos o secuencias de ejecución de un programa. Todos los hilos de un
+            programa comparten la memoria del proceso al que pertenecen. Los hilos de un programa, también comparten el
+            código.</p>
+        <h2 class="unidadSubtitulo">Time-slicing</h2>
+        <p>“Time-slicing” es una
+            técnica para para
+            implementar
+            multiprocesamiento. Con
+            esto, podemos ejecutar
+            una cantidad de hilos
+            mayor a la de los
+            procesadores alternando
+            entre diferentes hilos en
+            un mismo procesador.</p>
+
+        <h2 class="unidadSubtitulo">Procesamiento secuencial/serial:</h2>
+        <p>Procesamiento caracterizado
+            por algoritmos que se
+            ejecutan secuencialmente
+            uno después del otro, los
+            cuales tienen que ejecutarse
+            completamente antes de que
+            otro algoritmo pueda
+            ejecutarse; es decir, es
+            procesamiento que no
+            permite la ejecución
+            simultánea de 2 programas,
+            ya sea esta intercalada o real.</p>
+
+        <h2 class="unidadSubtitulo">Procesamiento concurrente:</h2>
+        <p>La concurrencia es la propiedad de
+            ciertas partes de un programa por
+            la cual las instrucciones del mismo
+            pueden ejecutarse en desorden (no
+            secuencialmente) sin afectar el
+            resultado del programa; es una
+            propiedad que posibilita que un
+            programa se pueda descomponer
+            en unidades independientes a
+            cualquier orden de ejecución, lo
+            cual permite que estas unidades se
+            puedan componer y ejecutar de
+            vuelta de manera arbitraria. Por lo tanto, con el procesamiento
+            concurrente, los programas, tras ser
+            descompuestos en unidades
+            independientes, se ejecutan en el mismo
+            periodo de tiempo, no secuencialmente,
+            aunque no se ejecutan en el mismo
+            momento 2 o más instrucciones/cálculos.</p>
+
+        <h2 class="unidadSubtitulo">Procesamiento paralelo:</h2>
+        <p>Es un tipo de procesamiento
+            en el cual las instrucciones se ejecutan
+            simultáneamente, en el
+            mismo momento y en el
+            mismo periodo.
+            Contrasta con la
+            computación
+            serial/secuencial y la
+            concurrente.</p>
+
+        <img
+            src="https://ferestrepoca.github.io/paradigmas-de-programacion/progconcurrente/concurrente_teoria/images/diferent.PNG">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="conjunto">2.3.3 Conjunto de instrucciones</h1>
+
+        <p>El conjunto de instrucciones que maneja una computadora es una
+            pieza fundamental para el funcionamiento de ésta debido a que las
+            instrucciones se comunican directamente con el procesador para
+            hacer un manejo adecuado de los datos que están procesando y
+            dependiendo del tipo de set de instrucciones que un CPU entienda
+            nos dirá el tipo de programas que una computadora puede llegar o no
+            a soportar, esto responde muchas veces a las interrogantes de
+            porque no podemos utilizar las mismas aplicaciones de un
+            dispositivo a otro y muchas veces es por la diferencia de
+            procesadores y el conjunto de instrucciones que maneja uno respecto
+            al otro.</p>
+
+        <h2 class="unidadSubtitulo">Características:</h2>
+        <ul class="listaUnidad numero">
+            <li>Ortogonales (Simétricas)
+                <ul class="listaUnidad circulo">
+                    <li>La ortogonalidad es una característica de las instrucciones que es considerada algo amplia en
+                        términos de lo que
+                        requiere una instrucción o un set de instrucciones para ser considerado ortogonal en primera
+                        instancia se dice
+                        que las instrucciones en un set deben de poder ser fuente y destino de cualquier elemento de la
+                        arquitectura del
+                        CPU con esto se refiere a que las instrucciones no solo deben de ser independientes en el
+                        sentido de que cada una
+                        haga una función única y distinta que no repita lo que hace otra, sino que en conjunto el set de
+                        instrucciones debe
+                        de ser independiente y consistente.</li>
+                </ul>
+            </li>
+
+            <li>Cisc
+                <ul class="listaUnidad circulo">
+                    <li>Un juego de instrucciones Cisc se caracteriza por un número reducido de instrucciones además del
+                        uso de
+                        pipelining que permite al procesador dividir la ejecución de una instrucción en distintas fases
+                        incrementando de
+                        esa manera la velocidad de ejecución.</li>
+                </ul>
+            </li>
+
+            <li>Risc
+                <ul class="listaUnidad circulo">
+                    <li>Este set tiene una cantidad de instrucciones considerable pero dichas instrucciones no suelen
+                        ejecutarse por
+                        medio de segmentación o pipelining, sus instrucciones no son ortogonales eso quiere decir que se
+                        debe tener
+                        cuidado con los registros que se utilizan debido a que no se pueden direccionar de cualquier
+                        forma los datos sobre
+                        cualquier registro, se debe especificar en la instrucción.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="modos">2.4 Modos de direccionamiento</h1>
+        </center>
+
+        <br><br>
+
+        <h2 class="unidadSubtitulo">¿Qué son?</h2>
+        <p>El direccionamiento en computación se refiere a la forma en que se
+            especifica una dirección de memoria o un registro dentro de una CPU.
+            Hay varios modos de direccionamiento diferentes, que se utilizan para
+            diferentes propósitos en el lenguaje ensamblador y en la programación
+            de bajo nivel.</p>
+
+        <img src="https://slideplayer.es/slide/9583303/30/images/2/Modos+de+Direccionamiento.jpg">
+
+        <h2 class="unidadSubtitulo">Direccionamiento inmediato</h2>
+        <p>El direccionamiento inmediato es un modo de direccionamiento en
+            informática en el que el valor del operando se incluye directamente en
+            la instrucción. En otras palabras, el operando se proporciona como un
+            valor inmediato en lugar de una dirección de memoria o registro.</p>
+
+        <p>En el direccionamiento inmediato, el valor del operando se coloca
+            directamente en el campo de datos de la instrucción, por lo que la CPU
+            puede acceder rápidamente a este valor sin tener que buscar en la
+            memoria. Este modo de direccionamiento se utiliza comúnmente para
+            asignar valores constantes a registros o para realizar operaciones
+            aritméticas simples.</p>
+
+        <h2 class="unidadSubtitulo">Direccionamiento directo</h2>
+        <p>El direccionamiento directo es un modo de direccionamiento en informática en
+            el que la dirección de memoria del operando se especifica directamente en la
+            instrucción. En otras palabras, el operando se encuentra en una dirección de
+            memoria fija y conocida.</p>
+
+        <p>En el direccionamiento directo, la dirección de memoria del operando se incluye
+            directamente en la instrucción. La CPU accede directamente a esta dirección
+            de memoria para obtener el valor del operando. Este modo de direccionamiento
+            es útil para acceder a datos almacenados en posiciones fijas de la memoria,
+            como variables o constantes.</p>
+
+        <h2 class="unidadSubtitulo">Direccionamiento indirecto</h2>
+        <p>El direccionamiento indirecto es un modo de direccionamiento en
+            informática en el que la dirección de memoria del operando se
+            encuentra en otro registro o en otra dirección de memoria. En otras
+            palabras, el operando se encuentra en una ubicación de memoria que
+            se especifica indirectamente a través de otra ubicación de memoria.</p>
+
+        <p>En el direccionamiento indirecto, en lugar de proporcionar la dirección
+            de memoria del operando directamente en la instrucción, se
+            proporciona la dirección de memoria de una ubicación de memoria
+            que contiene la dirección de memoria del operando. La CPU accede
+            primero a la ubicación de memoria indirecta para obtener la dirección
+            de memoria real del operando y luego accede a esa dirección de
+            memoria para obtener el valor del operando.</p>
+
+        <h2 class="unidadSubtitulo">Direccionamiento relativo</h2>
+        <p>Es un modo de direccionamiento en informática en el que la dirección
+            de memoria del operando se especifica como una distancia o
+            desplazamiento desde la dirección actual de la instrucción. En otras
+            palabras, el operando se encuentra en una posición de memoria
+            relativa a la dirección actual de la instrucción.</p>
+
+        <p>En el direccionamiento relativo, se proporciona un valor de
+            desplazamiento en la instrucción que se suma a la dirección actual de
+            la instrucción para obtener la dirección de memoria del operando. La
+            CPU calcula la dirección real del operando sumando el desplazamiento
+            a la dirección actual de la instrucción y accede a esa dirección de
+            memoria para obtener el valor del operando.</p>
+
+        <h2 class="unidadSubtitulo">Direccionamiento indexado</h2>
+        <p>Es un modo de direccionamiento en informática en el que la dirección
+            de memoria del operando se calcula sumando una dirección base y un
+            índice o desplazamiento. En otras palabras, el operando se encuentra
+            en una posición de memoria que se calcula mediante una suma de una
+            dirección base y un índice o desplazamiento.</p>
+
+        <p>En el direccionamiento indexado, se proporciona una dirección base
+            que indica la ubicación inicial del operando, y un índice o
+            desplazamiento que se suma a la dirección base para obtener la
+            dirección real del operando. La CPU calcula la dirección real del
+            operando sumando la dirección base y el índice o desplazamiento y
+            accede a esa dirección de memoria para obtener el valor del operando.</p>
+    </section>
+
+    <footer>
+        <p>Jesús Virgilio Sánchez Flores - 21051517</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#aspectos">4.1 Aspectos básicos de la computación paralela</a></li>
+            <li><a href="#tipos">4.2 Tipos de computación paralela</a>
+                <ul>
+                    <li><a href="#clasificacion">4.2.1 Clasificación</a></li>
+                    <li><a href="#arquitectura">4.2.2 Arquitectura de computadoras secuenciales</a></li>
+                    <li><a href="#organizacion">4.2.3 Organización de direcciones de memoria</a></li>
+                </ul>
+            </li>
+            <li><a href="#compartida">4.3 Sistemas de memoria compartida</a>
+                <ul>
+                    <li><a href="#dinamica">4.3.1 Redes de interconexión dinámica o indirectas</a></li>
+                </ul>
+            </li>
+            <li><a href="#distribuida">4.4 Sistemas de memoria distribuida</a>
+                <ul>
+                    <li><a href="#estatica">4.4.1 Redes de interconexión estáticas</a></li>
+                </ul>
+            </li>
+            <li><a href="#casos">4.5 Casos de estudio</a></li>
+        </ul>
+    </nav>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="aspectos">4.1 Aspectos básicos de la computación paralela</h1>
+        </center>
+
+        <br><br>
+        <h2 class="unidadSubtitulo">¿Qué son?</h2>
+        <p>La computación paralela es una
+            técnica de procesamiento de
+            información que se basa en la
+            utilización de múltiples
+            procesadores para llevar a cabo
+            una tarea en paralelo, en lugar de
+            utilizar un solo procesador. Esta
+            técnica permite mejorar
+            significativamente la velocidad y
+            eficiencia de los cálculos y
+            análisis de datos en la
+            computadora.
+        </p>
+        <h2 class="unidadSubtitulo">Sistemas de procesamiento paralelo</h2>
+        <p>Los sistemas de
+            procesamiento paralelo se
+            pueden clasificar en dos
+            categorías: simétricos y
+            asíncronos. Uno donde
+            todos los procesadores
+            comparten la misma
+            memoria, y otro donde cada
+            procesador tiene su propia
+            memoria.</p>
+        <img src="https://www.loyvan.com/wp-content/uploads/2014/06/procesamiento-en-paralelo.png" alt="">
+
+        <h2 class="unidadSubtitulo">Herramientas de computación en paralelo</h2>
+        <p>Las herramientas de computación en
+            paralelo son programas y bibliotecas
+            que se utilizan para programar y
+            ejecutar aplicaciones en sistemas
+            paralelos, de forma que podamos sacarle
+            el máximo provecho a estos. Un ejemplo
+            de esto es la herramienta CUDA
+            desarrollada por Nvidia, la cual
+            permite que aplicaciones aprovechen el
+            procesamiento paralelo para el
+            procesamiento de gráficos, usando la
+            GPU como un coprocesador usando
+            paralelamente sus núcleos.</p>
+    </section>
+
+    <section class="fondo2 box">
+        <center>
+            <h1 class="unidadTema" id="tipos">4.2 Tipos de computación paralela</h1>
+        </center>
+
+        <br><br>
+        <h1 class="unidadTitulo" id="clasificacion">4.2.1 Clasificación</h1>
+        <p>Computación multinúcleo: Un procesador multinúcleo es un procesador que incluye múltiples
+            unidades de ejecución (núcleos) en el mismo chip.</p>
+        <p>Multiprocesamiento simétrico: Un multiprocesador simétrico (SMP) es un sistema
+            computacional con múltiples procesadores idénticos que comparten memoria y se conectan a
+            través de un bus.</p>
+        <p>Computación en clúster: Un clúster es un grupo de ordenadores débilmente acoplados que
+            trabajan en estrecha colaboración, de modo que en algunos aspectos pueden considerarse
+            como un solo equipo.</p>
+        <p>Procesamiento paralelo masivo: Tienden a ser más grandes que los clústeres, con «mucho
+            más» de 100 procesadores.</p>
+        <p>Computación distribuida: La computación distribuida es la forma más distribuida de la
+            computación paralela. Se hace uso de ordenadores que se comunican a través de la Internet
+            para trabajar en un problema dado.</p>
+        <p>Circuitos integrados de aplicación específica: Debido a que un ASIC (por definición) es
+            específico para una aplicación dada, puede ser completamente optimizado para esa aplicación.</p>
+        <p>Procesadores vectoriales: Pueden ejecutar la misma instrucción en grandes conjuntos de
+            datos.</p>
+        <img src="https://www.teldat.com/wp-content/uploads/2020/07/Parallel-computing.jpg" alt="">
+    </section>
+
+    <section class="fondo1 box">
+        <h1 class="unidadTitulo" id="arquitectura">4.2.2 Arquitectura de computadoras secuenciales</h1>
+
+        <p>Las computadoras secuenciales se basan en el
+            modelo introducido por John Von Neumann, la cual
+            consiste en:</p>
+        <ul class="listaUnidad circulo">
+            <li>Una Unidad Central de Procesamiento(CPU)</li>
+            <li>Memoria Principal para almacenar
+                información</li>
+            <li>Bus donde fluyan los datos</li>
+            <li>Mecanismo de sincronización</li>
+        </ul>
+        <img src="data:image/jpeg;base64,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"
+            alt="">
+
+        <h2 class="unidadSubtitulo">Segmentación de instrucciones Pipeline</h2>
+        <p>Por las limitaciones que este tiene se
+            han desarrollado algunas estrategias
+            para aumentar el rendimiento.
+            La más conocida es la segmentación
+            de instrucciones Pipeline que
+            consiste en llevar a la cola de
+            instrucciones la siguiente instrucción
+            que se ejecutará</p>
+        <p>En estos sistemas, los valores de las salidas, en
+            un momento dado, no dependen exclusivamente de los
+            valores de las entradas en dicho momento, sino
+            también de los valores anteriores.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pipeline%2C_4_stage_with_bubble.svg/350px-Pipeline%2C_4_stage_with_bubble.svg.png"
+            alt="">
+
+        <h2 class="unidadSubtitulo">Biestable</h2>
+        <p>Biestable: Es un multivibrador capaz de
+            permanecer en uno de dos estados posibles
+            durante un tiempo indefinido en ausencia de
+            perturbaciones. Esta característica es
+            ampliamente utilizada en electrónica
+            digital para memorizar información. El paso
+            de un estado a otro se realiza variando sus
+            entradas.</p>
+        <p>La mayoría de estos sistemas están gobernados por señales
+            de reloj a los cuales se los denomina sincronos. Pero al
+            contrario a todos ellos que no son gobernados por éste, se
+            les conoce como asíncronos.
+            Estos pueden encontrarse en forma de Circuito integrado
+            (Contador) o como estructuras en sistemas programados
+            (Registros de desplazamiento)</p>
+        <p>Contador: Circuito secuencial construido a partir de
+            biestable y puertas lógicas capaz de almacenar y contar
+            los impulsos que recibe en la entrada destinada a tal
+            efecto, asimismo también actúa como divisor de frecuencia.</p>
+        <p>Registros de desplazamiento: Consistente en una serie de
+            biestables, generalmente de tipo D, conectados en cascada,
+            que basculan de forma sincrénica con la misma sefial de
+            reloj.</p>
+        <img src="data:image/jpeg;base64,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3kTAE7+8F1cjq7rGi9Xm+Og0KLPcjq7rGi9Xm+OvKWxXS4jk73ecxn5UdOx0Qf4nPMj348TXNz05QcTqGm1XfXVb3P5GmaY4nsc5hMhcDI9jmkHDAxrMjcTyg34V+2WqltbX822i57tp73uL3vOMDac453AYA4AcAuunp4qSnbT00LWMaNlrWjAAHAADgF0oCIiAiIgzFRS3mj1DNcbfRwysljjb3czoy0xmQnhG/IO34uC6Oean6ipvW3/7ZX0QQOean6ipvW3/AO2Xw6bVVR/hx0dJD++6WSUjyNEUeftcFokQRrTZ2W1z6iSZ0sz8cpM/G07HBoAGGtGThrRjykkqyiICIiCHafn6u85H7NiuKHafn6u85H7NiuICIiAiIg/gAHBclPBHRw8nSQta3JOAA0ZJyTgdJJOfGuxEBERAREQEREBERAREQQ9O/nNZ9ad7OJXFmIo77b6yoNHbYZGSSmRrnTuYd7GNwW8k7pb310891L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CC8ig891L1FB6274Cc91L1FB6274CD6tPz9Xecj9mxXFCsVNXx1dRWXKnYx0r2kNY8vADWNbvJYzpHeV1AREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf//Z"
+            alt="">
+    </section>
+
+    <section class="fondo2 box">
+        <h1 class="unidadTitulo" id="organizacion">4.2.3 Organización de direcciones de memoria</h1>
+        <h2 class="unidadSubtitulo">Organización del espacio de direcciones de memoria</h2>
+        <ul class="listaUnidad circulo">
+            <li>Organización lógica: Los programas a menudo están organizados en
+                módulos, algunos de los cuales pueden ser compartidos por diferentes
+                programas. La gestión de memoria es responsable de manejar esta
+                organización lógica, que se contrapone al espacio de direcciones
+                físicas lineales. Una forma de lograrlo es mediante la segmentación
+                de memoria.</li>
+            <li>Organización física: La memoria suele dividirse en un almacenamiento
+                primario de alta velocidad y uno secundario de menor velocidad. La
+                gestión de memoria del sistema operativo se ocupa de trasladar la
+                información entre estos dos niveles de memoria.</li>
+        </ul>
+        <p>Las direcciones de memoria se organizan en bloques o
+            segmentos de memoria, cada uno con una dirección base y un
+            tamaño determinado. Las direcciones de memoria se
+            representan como números enteros que indican la posición
+            en la memoria donde se encuentra un dato o una
+            instrucción.</p>
+        <p>En los sistemas de memoria de acceso aleatorio (RAM), las
+            direcciones de memoria se organizan en una matriz de
+            celdas de memoria, donde cada celda se puede acceder
+            directamente mediante su dirección. En los sistemas de
+            memoria caché, la organización de direcciones de memoria
+            se utiliza para gestionar la caché y optimizar el acceso a
+            los datos.</p>
+    </section>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="compartida">4.3 Sistemas de memoria compartida</h1>
+        </center>
+
+        <br><br>
+        <h2 class="unidadSubtitulo">Definicion</h2>
+        <p>En informática, la memoria compartida es aquel tipo de memoria que
+            puede ser accedida por múltiples programas, ya sea para
+            comunicarse entre ellos o para evitar copias redundantes. La
+            memoria compartida es un modo eficaz de pasar datos entre
+            aplicaciones. Dependiendo del contexto, los programas pueden
+            ejecutarse en un mismo procesador o en procesadores separados. La
+            memoria usada entre dos hilos de ejecución dentro de un mismo
+            programa se conoce también como memoria compartida.</p>
+
+        <h2 class="unidadSubtitulo">¿Cómo funciona?</h2>
+        <p>La memoria compartida funciona permitiendo que múltiples procesos accedan a la misma región de
+            memoria. Esto significa que cada proceso puede leer y escribir en la misma sección de memoria,
+            lo que les permite compartir información y comunicarse entre sí de manera eficiente.</p>
+        <p>Para implementar la memoria compartida, el sistema operativo proporciona una sección de memoria
+            que se puede asignar a varios procesos. Cuando un proceso desea acceder a la memoria compartida,
+            debe unirse a ella y obtener un puntero a la región de memoria compartida. A partir de ahí, el
+            proceso puede leer y escribir datos en la misma sección de memoria.</p>
+        <p>Para evitar problemas de concurrencia, como la posibilidad de que dos procesos accedan a la
+            misma región de memoria al mismo tiempo, se utilizan técnicas de sincronización para coordinar
+            el acceso a la memoria compartida. Las técnicas de sincronización más comunes son los semáforos
+            y los mutex. Estos son objetos que actúan como candados, permitiendo que un solo proceso acceda
+            a la memoria compartida en un momento dado. Por ejemplo, cuando un proceso desea escribir en la
+            memoria compartida, puede solicitar el candado y obtener acceso exclusivo a la región de
+            memoria. Otros procesos que deseen leer o escribir deben esperar hasta que el candado se libere.</p>
+
+        <h2 class="unidadSubtitulo">Funcionalidad</h2>
+        <p>Para acceder a la memoria compartida, los procesos deben utilizar una API específica del sistema
+            operativo que les permita conectarse a la memoria compartida y acceder a ella de manera segura.
+            Por ejemplo, en sistemas operativos basados en Unix, la API de memoria compartida se encuentra
+            en la biblioteca de funciones llamada "shmget", que permite a los procesos crear y conectarse a
+            segmentos de memoria compartida.</p>
+        <p>Una vez que los procesos se han conectado a la memoria compartida, pueden acceder a ella y
+            compartir datos de manera eficiente. En lugar de copiar los datos entre los procesos, los datos
+            se almacenan en la memoria compartida y se comparten entre los procesos que la utilizan.</p>
+        <img src="data:image/png;base64,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"
+            alt="">
+        <p>En Windows, la memoria compartida se puede implementar mediante el uso de objetos de memoria
+            compartida, que son un tipo de objeto de kernel que permite a los procesos compartir datos y
+            recursos en la memoria del sistema.</p>
+        <p>Cuando un proceso necesita acceder a una región de memoria compartida, crea un objeto de memoria
+            compartida y solicita un identificador único para ese objeto. Otros procesos pueden acceder al
+            mismo objeto de memoria compartida utilizando ese identificador único.</p>
+        <p>Para crear un objeto de memoria compartida en Windows, se puede utilizar la función
+            CreateFileMapping(), que reserva una región de memoria y devuelve un identificador que puede ser
+            utilizado por varios procesos para acceder a esa región de memoria compartida. Los procesos
+            pueden luego utilizar las funciones de memoria estándar, como memcpy() y memset(), para leer y
+            escribir datos en esa región de memoria.</p>
+        <img src="https://i.ytimg.com/vi/Z14gq4l1NHc/hqdefault.jpg" alt="">
+
+        <h1 class="unidadTitulo" id="dinamica">4.3.1 Redes de interconexión dinámica o indirectas</h1>
+        <h2 class="unidadSubtitulo">Introducción</h2>
+        <p>Las redes de interconexión dinámicas son una tecnología emergente que permite la
+            conexión y comunicación entre diferentes sistemas informáticos en tiempo real.</p>
+        <p>Estas redes permiten la integración de diferentes plataformas y servicios, lo que
+            aumenta la eficiencia y reduce los tiempos de respuesta en los procesos empresariales.</p>
+        <p>Una red dinámica es una red cuya topología puede variar durante el cursó de la
+            ejecución de un programa paralelo o entre dos ejecuciones de programas. La red está
+            constituida por elementos materiales específicos, llamados Conmutadores o switches</p>
+        <p>Las redes indirectas también pueden modelarse con un grafo donde n es un conjunto dé
+            switches y c es el conjunto de enlaces unidireccionales o bidireccionales entre switches.
+            Para el análisis de la mayoría de propiedades, no es necesario incluir explícitamente los
+            nodos de procesamiento en el grafo. Aunque las redes indirectas pueden modelarse de
+            forma similar a las directas existen algunas diferencias entre ellas</p>
+
+        <h2 class="unidadSubtitulo">¿Qué son las redes de interconexión dinámicas?</h2>
+        <p>Las redes de interconexión dinámicas son sistemas de comunicación que permiten la
+            transferencia de datos en tiempo real entre diferentes dispositivos y plataformas.</p>
+        <p>Estas redes se caracterizan por su capacidad para adaptarse a diferentes entornos y
+            situaciones, lo que les permite optimizar la comunicación y el intercambio de información en
+            diferentes contextos y sectores.</p>
+        <p>Un ejemplo de red de interconexión dinámica es Internet, en la que la comunicación entre
+            dispositivos se realiza a través de múltiples nodos intermedios. Otro ejemplo son las redes
+            neuronales, en las que las conexiones entre neuronas se realizan a través de sinapsis y
+            neurotransmisores.</p>
+
+        <h2 class="unidadSubtitulo">Características</h2>
+        <p>Las redes de interconexión dinámicas se caracterizan por su flexibilidad y escalabilidad, lo que
+            les permite adaptarse a diferentes entornos y necesidades empresariales.</p>
+        <p>Además, estas redes cuentan con herramientas de análisis y monitoreo que permiten identificar
+            problemas y mejorar la eficiencia en tiempo real, lo que las convierte en una herramienta
+            esencial para la transformación digital de las empresas.</p>
+        <p>Las redes de interconexión dinámicas ofrecen numerosos beneficios para las empresas, como
+            la mejora de la eficiencia y la reducción de costos operativos.</p>
+        <p>Además, estas redes permiten la integración de diferentes sistemas y plataformas, lo que
+            aumenta la colaboración y la innovación dentro de las organizaciones.</p>
+        <p>En general, las redes de interconexión dinámica indirecta y medio compartido se utilizan en
+            redes de área local (LAN) de tamaño pequeño o mediano, donde el número de dispositivos
+            conectados es relativamente pequeño y la cantidad de datos transmitidos no es muy grande.
+            Sin embargo, en redes de mayor tamaño, se suelen utilizar otros tipos de arquitecturas de
+            redes que permiten una transmisión más eficiente y una mejor gestión del tráfico de datos.</p>
+    </section>
+
+    <section class="fondo2 box">
+        <center>
+            <h1 class="unidadTema" id="distribuida">4.4 Sistemas de memoria distribuida</h1>
+        </center>
+
+        <br><br>
+        <h2 class="unidadSubtitulo">Multicomputadores</h2>
+        <p>Los sistemas multicomputadores
+            se pueden ver como un
+            computador paralelo en el cual
+            cada procesador tiene su
+            propia memoria local.</p>
+        <p>En estos sistemas la memoria se encuentra distribuida y no compartida como
+            en los sistemas multiprocesador. Los computadores se comunican a través de
+            paso de mensajes, ya que éstos sólo tienen acceso directo a su memoria local
+            y no a las memorias del resto de procesadores.</p>
+        <p>La transferencia de los datos se
+            realiza a través de la red de
+            interconexión que conecta un
+            subconjunto de procesadores con
+            otro subconjunto. La transferencia
+            de unos procesadores a otros se
+            realiza por tanto por múltiples
+            transferencias entre procesadores
+            conectados dependiendo del
+            establecimiento de dicha red.</p>
+
+        <h2 class="unidadSubtitulo">Características</h2>
+        <ul class="listaUnidad circulo">
+            <li>La memoria es privada (es decir, cada
+                procesador tiene un mapa de
+                direcciones propio que no es
+                accesible directamente a los demás).</li>
+            <li>Los nodos colaboran para resolver
+                juntos un mismo problema (ejecutar
+                la misma aplicación).</li>
+            <li>En un multicomputador, cada nodo es
+                una computadora clásica.</li>
+            <li>La compartición de datos es
+                explícita, ya que el acceso a datos
+                comunes es por paso de mensajes.</li>
+        </ul>
+
+        <h1 class="unidadTitulo" id="estatica">4.4.1 Redes de interconexión estáticas</h1>
+
+        <h2 class="unidadSubtitulo">Características</h2>
+        <ul class="listaUnidad circulo">
+            <li>Anteriormente habíamos visto sobre
+                los sistemas de memoria distribuida</li>
+            <li>Hay de dos tipos el primero consta
+                de un único computador con
+                múltiples CPUs comunicadas por un
+                bus de datos</li>
+            <li>En el segundo se utilizan múltiples
+                computadores, cada uno con su propio
+                procesador, enlazados por una red de
+                interconexión más o menos rápida.</li>
+            <li>El computador paralelo es esencialmente
+                una colección de procesadores
+                secuenciales, cada uno con su propia
+                memoria local, que pueden trabajar
+                conjuntamente.</li>
+        </ul>
+
+        <h2 class="unidadSubtitulo">Red de interconexión</h2>
+        <p>Al tener una máquina paralela a diversos procesadores
+            surge la necesidad de comunicar información entre ellos
+            de cara a resolver un problema común o la existencia de
+            una red de interconexión que permita realizar las
+            operaciones descritas.</p>
+        <p>El papel de la red de interconexión es tanto más
+            importante cuanto mayor sea el número de elementos
+            físicos que se deben unir y el flujo de información que
+            se desee intercambiar; en el caso de los ordenadores
+            masivamente paralelos</p>
+    </section>
+
+    <section class="fondo1 box">
+        <center>
+            <h1 class="unidadTema" id="casos">4.5 Casos de estudio</h1>
+        </center>
+
+        <br><br>
+
+        <h2 class="unidadSubtitulo">Nvidia</h2>
+        <p>NVIDIA es una empresa que
+            diseña y fabrica tarjetas gráficas,
+            procesadores y sistemas de
+            computación de alto rendimiento. La
+            tecnología CUDA de NVIDIA permite la
+            computación paralela en sus tarjetas
+            gráficas, lo que las hace ideales
+            para aplicaciones como la
+            inteligencia artificial, la
+            simulación y el procesamiento de
+            imágenes.</p>
+        <img src="https://hd2.tudocdn.net/849056?w=1200&h=900" alt="">
+
+        <h2 class="unidadSubtitulo">AWS</h2>
+        <p>Amazon Web
+            Services (AWS) es un servicio de
+            computación en la nube que ofrece una
+            amplia variedad de opciones de
+            computación paralela, incluyendo
+            Amazon EC2, que permite el uso de
+            múltiples instancias para
+            procesamiento paralelo de grandes
+            conjuntos de datos.</p>
+        <img src="https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2020/08/5-1.png?fit=1654%2C1103&ssl=1" alt="">
+
+        <h2 class="unidadSubtitulo">Google Cloud Platform</h2>
+        <p>Google Cloud
+            Platform es otro servicio de
+            computación en la nube que utiliza la
+            computación paralela para procesar
+            grandes cantidades de datos. Google
+            también ha desarrollado su propio
+            procesador de inteligencia artificial
+            llamado TPU (Tensor Processing Unit),
+            que utiliza la computación paralela
+            para acelerar el entrenamiento de
+            redes neuronales.</p>
+        <img src="https://ayudaleyprotecciondatos.es/wp-content/uploads/2020/10/cloud-computing-google.jpg" alt="">
+
+        <h2 class="unidadSubtitulo">IBM</h2>
+        <p>IBM ha desarrollado una variedad
+            de productos y servicios de
+            computación paralela, incluyendo el
+            sistema de computación en paralelo
+            IBM Blue Gene, que ha sido utilizado
+            en aplicaciones científicas y de
+            ingeniería, y el servidor de alto
+            rendimiento IBM Power System AC922,
+            que utiliza procesadores IBM POWER9
+            para ofrecer computación de alto
+            rendimiento.</p>
+        <img src="https://i.blogs.es/d526aa/summit/840_560.jpg" alt="">
+    </section>
+
+    <footer>
+        <p>Jesús Virgilio Sánchez Flores - 21051517</p>
+    </footer>
+</body>
+
+</html>
